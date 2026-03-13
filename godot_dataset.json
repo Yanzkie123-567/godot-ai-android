@@ -5282,5 +5282,1207 @@
   {
     "q": "how to set VoxelGI normal bias",
     "a": "$VoxelGI.normal_bias = 0.5"
+  },
+  {
+    "q": "how to create an enum in gdscript",
+    "a": "enum State { IDLE, WALK, RUN, JUMP, FALL }"
+  },
+  {
+    "q": "how to use an enum value",
+    "a": "var current_state = State.IDLE\nif current_state == State.WALK:\n    print('walking')"
+  },
+  {
+    "q": "how to get the name of an enum value as a string",
+    "a": "print(State.keys()[current_state])"
+  },
+  {
+    "q": "how to iterate over all enum values",
+    "a": "for key in State.keys():\n    print(key, State[key])"
+  },
+  {
+    "q": "how to use a state machine with match",
+    "a": "match state:\n    State.IDLE:\n        idle_logic()\n    State.WALK:\n        walk_logic()\n    State.JUMP:\n        jump_logic()"
+  },
+  {
+    "q": "how to declare a constant in gdscript",
+    "a": "const MAX_SPEED = 300.0\nconst GRAVITY = Vector2(0, 980)"
+  },
+  {
+    "q": "how to use a static variable in gdscript 4",
+    "a": "static var instance_count := 0"
+  },
+  {
+    "q": "how to use a static function in gdscript 4",
+    "a": "static func add(a: int, b: int) -> int:\n    return a + b"
+  },
+  {
+    "q": "how to write a for loop in gdscript",
+    "a": "for i in range(10):\n    print(i)"
+  },
+  {
+    "q": "how to write a while loop in gdscript",
+    "a": "var count = 0\nwhile count < 5:\n    count += 1"
+  },
+  {
+    "q": "how to break out of a loop",
+    "a": "for i in range(100):\n    if i == 10:\n        break"
+  },
+  
+  {
+    "q": "how to skip to the next loop iteration",
+    "a": "for i in range(10):\n    if i % 2 == 0:\n        continue\n    print(i)"
+  },
+  {
+    "q": "how to use a typed variable in gdscript 4",
+    "a": "var health: int = 100\nvar speed: float = 200.0\nvar name: String = 'Hero'"
+  },
+  {
+    "q": "how to use @onready in gdscript 4",
+    "a": "@onready var sprite: Sprite2D = $Sprite2D\n@onready var timer: Timer = $Timer"
+  },
+  {
+    "q": "how to use @export_range to clamp an exported variable",
+    "a": "@export_range(0, 100, 1) var health: int = 100"
+  },
+  {
+    "q": "how to use @export_color_no_alpha",
+    "a": "@export_color_no_alpha var tint: Color = Color.WHITE"
+  },
+  {
+    "q": "how to use @export_file to pick a file path",
+    "a": "@export_file('*.tscn') var level_path: String"
+  },
+  {
+    "q": "how to use @export_dir to pick a directory",
+    "a": "@export_dir var save_directory: String"
+  },
+  {
+    "q": "how to use @export_multiline for long text",
+    "a": "@export_multiline var description: String"
+  },
+  {
+    "q": "how to use @export_group in gdscript 4",
+    "a": "@export_group('Movement')\n@export var speed: float = 200.0\n@export var jump_force: float = 400.0"
+  },
+  {
+    "q": "how to use @export_subgroup in gdscript 4",
+    "a": "@export_subgroup('Combat')\n@export var damage: int = 10\n@export var attack_range: float = 50.0"
+  },
+  {
+    "q": "how to define a virtual function that child classes must override",
+    "a": "func take_damage(amount: int) -> void:\n    pass  # override in subclass"
+  },
+  {
+    "q": "how to extend a class in gdscript",
+    "a": "extends CharacterBody2D\n\nclass_name Player"
+  },
+  {
+    "q": "how to call a parent class function",
+    "a": "func _ready() -> void:\n    super._ready()\n    print('Player ready')"
+  },
+  {
+    "q": "how to define a class_name in gdscript",
+    "a": "class_name Enemy\nextends CharacterBody2D"
+  },
+  {
+    "q": "how to use an inner class in gdscript",
+    "a": "class Inventory:\n    var items: Array = []\n    func add(item: String):\n        items.append(item)"
+  },
+  {
+    "q": "how to declare a variable with no type inference in gdscript",
+    "a": "var data: Variant = null"
+  },
+  {
+    "q": "how to check if a variable is null",
+    "a": "if my_node == null:\n    print('node is null')"
+  },
+  {
+    "q": "how to use the not keyword",
+    "a": "if not is_dead:\n    move()"
+  },
+  {
+    "q": "how to use the and and or keywords",
+    "a": "if is_alive and not is_stunned:\n    attack()\nif on_ground or has_double_jump:\n    can_jump = true"
+  },
+  {
+    "q": "how to add a point to a line2d",
+    "a": "$Line2D.add_point(Vector2(100, 200))"
+  },
+  {
+    "q": "how to remove a point from a line2d",
+    "a": "$Line2D.remove_point(0)"
+  },
+  {
+    "q": "how to clear all points in a line2d",
+    "a": "$Line2D.clear_points()"
+  },
+  {
+    "q": "how to set the width of a line2d",
+    "a": "$Line2D.width = 4.0"
+  },
+  {
+    "q": "how to set the color of a line2d",
+    "a": "$Line2D.default_color = Color.RED"
+  },
+  {
+    "q": "how to get the number of points in a line2d",
+    "a": "var count = $Line2D.get_point_count()"
+  },
+  {
+    "q": "how to set the polygon of a polygon2d",
+    "a": "$Polygon2D.polygon = PackedVector2Array([Vector2(0,0), Vector2(100,0), Vector2(50,100)])"
+  },
+  {
+    "q": "how to set the color of a polygon2d",
+    "a": "$Polygon2D.color = Color(0.2, 0.8, 0.3)"
+  },
+  {
+    "q": "how to draw a texture on a polygon2d",
+    "a": "$Polygon2D.texture = preload('res://mytex.png')"
+  },
+  {
+    "q": "how to draw a dashed line using canvasitem draw",
+    "a": "func _draw():\n    draw_dashed_line(Vector2(0,0), Vector2(200,0), Color.WHITE, 2.0, 10.0)"
+  },
+  {
+    "q": "how to draw a polygon using canvasitem draw",
+    "a": "func _draw():\n    var points = PackedVector2Array([Vector2(0,0),Vector2(100,0),Vector2(50,100)])\n    draw_polygon(points, PackedColorArray([Color.GREEN]))"
+  },
+  
+  {
+    "q": "how to draw a colored rect using canvasitem draw",
+    "a": "func _draw():\n    draw_rect(Rect2(Vector2(10,10), Vector2(80,80)), Color.BLUE)"
+  },
+  {
+    "q": "how to draw text using canvasitem draw",
+    "a": "func _draw():\n    draw_string(ThemeDB.fallback_font, Vector2(10, 30), 'Score: 0', HORIZONTAL_ALIGNMENT_LEFT, -1, 16)"
+  },
+  {
+    "q": "how to force a canvasitem to redraw",
+    "a": "queue_redraw()"
+  },
+  {
+    "q": "how to draw a textured rect using canvasitem draw",
+    "a": "func _draw():\n    draw_texture_rect(texture, Rect2(Vector2.ZERO, Vector2(64,64)), false)"
+  },
+  {
+    "q": "how to get a point on a curve2d at a given offset",
+    "a": "var point = $Path2D.curve.sample_baked(offset)"
+  },
+  {
+    "q": "how to get the total length of a curve2d",
+    "a": "var length = $Path2D.curve.get_baked_length()"
+  },
+  {
+    "q": "how to add a point to a curve2d in code",
+    "a": "$Path2D.curve.add_point(Vector2(100, 200))"
+  },
+  {
+    "q": "how to clear all points on a curve2d",
+    "a": "$Path2D.curve.clear_points()"
+  },
+  {
+    "q": "how to move a pathfollow2d along a path",
+    "a": "$PathFollow2D.progress += speed * delta"
+  },
+  {
+    "q": "how to loop a pathfollow2d",
+    "a": "$PathFollow2D.loop = true"
+  },
+  {
+    "q": "how to get the rotation of a pathfollow2d",
+    "a": "var angle = $PathFollow2D.rotation"
+  },
+  {
+    "q": "how to move a pathfollow3d along a path",
+    "a": "$PathFollow3D.progress += speed * delta"
+  },
+  {
+    "q": "how to sample a curve resource value",
+    "a": "var val = my_curve.sample(0.5)  # 0.0 to 1.0"
+  },
+  {
+    "q": "how to create a curve resource in code",
+    "a": "var curve = Curve.new()\ncurve.add_point(Vector2(0.0, 0.0))\ncurve.add_point(Vector2(1.0, 1.0))"
+  },
+  {
+    "q": "how to get all animation names from an animation player",
+    "a": "var names = $AnimationPlayer.get_animation_list()"
+  },
+  {
+    "q": "how to check the current animation name playing",
+    "a": "var anim = $AnimationPlayer.current_animation"
+  },
+  {
+    "q": "how to queue an animation to play after the current one",
+    "a": "$AnimationPlayer.queue('run')"
+  },
+  {
+    "q": "how to clear queued animations",
+    "a": "$AnimationPlayer.clear_queue()"
+  },
+  {
+    "q": "how to get the current position in an animation",
+    "a": "var pos = $AnimationPlayer.current_animation_position"
+  },
+  {
+    "q": "how to get the total length of the current animation",
+    "a": "var len = $AnimationPlayer.current_animation_length"
+  },
+  {
+    "q": "how to set animation autoplay in code",
+    "a": "$AnimationPlayer.autoplay = 'idle'"
+  },
+  {
+    "q": "how to connect the animation_finished signal",
+    "a": "$AnimationPlayer.animation_finished.connect(_on_animation_finished)"
+  },
+  {
+    "q": "how to connect the animation_looped signal",
+    "a": "$AnimationPlayer.animation_looped.connect(_on_animation_looped)"
+  },
+  {
+    "q": "how to blend two animations using animation player",
+    "a": "$AnimationPlayer.play_with_capture('walk', 0.2)"
+  },
+  {
+    "q": "how to make camera2d follow a target smoothly",
+    "a": "func _process(delta):\n    global_position = global_position.lerp($Player.global_position, 10.0 * delta)"
+  },
+  {
+    "q": "how to add camera2d screen shake",
+    "a": "func shake(strength: float, duration: float):\n    var tween = create_tween()\n    for i in 10:\n        tween.tween_property(self, 'offset', Vector2(randf_range(-strength, strength), randf_range(-strength, strength)), duration / 10.0)"
+  },
+  {
+    "q": "how to reset camera2d offset",
+    "a": "$Camera2D.offset = Vector2.ZERO"
+  },
+  {
+    "q": "how to enable camera2d drag horizontal",
+    "a": "$Camera2D.drag_horizontal_enabled = true"
+  },
+  {
+    "q": "how to enable camera2d drag vertical",
+    "a": "$Camera2D.drag_vertical_enabled = true"
+  },
+  {
+    "q": "how to set camera2d drag margin",
+    "a": "$Camera2D.drag_horizontal_offset = 0.2"
+  },
+  {
+    "q": "how to enable camera2d position smoothing",
+    "a": "$Camera2D.position_smoothing_enabled = true\n$Camera2D.position_smoothing_speed = 5.0"
+  },
+  {
+    "q": "how to enable camera2d rotation smoothing",
+    "a": "$Camera2D.rotation_smoothing_enabled = true\n$Camera2D.rotation_smoothing_speed = 3.0"
+  },
+  {
+    "q": "how to reset camera2d smoothing instantly",
+    "a": "$Camera2D.reset_smoothing()"
+  },
+  {
+    "q": "how to get the value of a spinbox",
+    "a": "var val = $SpinBox.value"
+  },
+  {
+    "q": "how to set the value of a spinbox",
+    "a": "$SpinBox.value = 42.0"
+  },
+  {
+    "q": "how to set the min and max of a spinbox",
+    "a": "$SpinBox.min_value = 0.0\n$SpinBox.max_value = 100.0"
+  },
+  {
+    "q": "how to connect a spinbox value changed signal",
+    "a": "$SpinBox.value_changed.connect(_on_spinbox_changed)"
+  },
+  {
+    "q": "how to get the value of a hslider",
+    "a": "var val = $HSlider.value"
+  },
+  {
+    "q": "how to set the step of a slider",
+    "a": "$HSlider.step = 0.5"
+  },
+  {
+    "q": "how to add items to an optionbutton",
+    "a": "$OptionButton.add_item('Option A')\n$OptionButton.add_item('Option B')"
+  },
+  {
+    "q": "how to get the selected item text in optionbutton",
+    "a": "var text = $OptionButton.get_item_text($OptionButton.selected)"
+  },
+  {
+    "q": "how to get the selected index in optionbutton",
+    "a": "var idx = $OptionButton.selected"
+  },
+  {
+    "q": "how to clear all items in optionbutton",
+    "a": "$OptionButton.clear()"
+  },
+  {
+    "q": "how to check if a checkbox is checked",
+    "a": "var is_on = $CheckBox.button_pressed"
+  },
+  {
+    "q": "how to set a checkbox checked state",
+    "a": "$CheckBox.button_pressed = true"
+  },
+  {
+    "q": "how to connect a checkbox toggled signal",
+    "a": "$CheckBox.toggled.connect(_on_checkbox_toggled)"
+  },
+  {
+    "q": "how to connect a checkbutton toggled signal",
+    "a": "$CheckButton.toggled.connect(_on_toggle)"
+  },
+  {
+    "q": "how to show a file dialog",
+    "a": "$FileDialog.popup_centered()"
+  },
+  {
+    "q": "how to set file dialog mode to open file",
+    "a": "$FileDialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE"
+  },
+  {
+    "q": "how to set file dialog mode to save file",
+    "a": "$FileDialog.file_mode = FileDialog.FILE_MODE_SAVE_FILE"
+  },
+  {
+    "q": "how to add a filter to a file dialog",
+    "a": "$FileDialog.add_filter('*.png ; PNG Images')"
+  },
+  {
+    "q": "how to connect file dialog file selected signal",
+    "a": "$FileDialog.file_selected.connect(_on_file_selected)"
+  },
+  {
+    "q": "how to show a confirmation dialog",
+    "a": "$ConfirmationDialog.dialog_text = 'Are you sure?'\n$ConfirmationDialog.popup_centered()"
+  },
+  {
+    "q": "how to connect a confirmation dialog confirmed signal",
+    "a": "$ConfirmationDialog.confirmed.connect(_on_confirmed)"
+  },
+  {
+    "q": "how to show an accept dialog",
+    "a": "$AcceptDialog.dialog_text = 'Done!'\n$AcceptDialog.popup_centered()"
+  },
+  {
+    "q": "how to detect a double tap on mobile",
+    "a": "func _input(event):\n    if event is InputEventScreenTouch and event.double_tap:\n        print('double tapped')"
+  },
+  {
+    "q": "how to get the pressure of a touch event",
+    "a": "func _input(event):\n    if event is InputEventScreenTouch:\n        print(event.pressure)"
+  },
+  {
+    "q": "how to detect a swipe gesture manually",
+    "a": "var swipe_start = Vector2.ZERO\nfunc _input(event):\n    if event is InputEventScreenTouch:\n        if event.pressed:\n            swipe_start = event.position\n        else:\n            var delta = event.position - swipe_start\n            if delta.length() > 50:\n                print('swipe dir: ', delta.normalized())"
+  },
+  {
+    "q": "how to detect if a mouse button was just released",
+    "a": "func _input(event):\n    if event is InputEventMouseButton:\n        if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:\n            print('released')"
+  },
+  {
+    "q": "how to get mouse speed from input event",
+    "a": "func _input(event):\n    if event is InputEventMouseMotion:\n        print('speed: ', event.velocity)"
+  },
+  {
+    "q": "how to detect any key press",
+    "a": "func _input(event):\n    if event is InputEventKey and event.pressed:\n        print('key pressed: ', event.keycode)"
+  },
+  {
+    "q": "how to get the keycode name as a string",
+    "a": "var name = OS.get_keycode_string(event.keycode)"
+  },
+  {
+    "q": "how to simulate pressing an action in code",
+    "a": "Input.action_press('jump')"
+  },
+  {
+    "q": "how to simulate releasing an action in code",
+    "a": "Input.action_release('jump')"
+  },
+  {
+    "q": "how to set deadzone for a joystick action",
+    "a": "InputMap.action_set_deadzone('move_right', 0.2)"
+  },
+  {
+    "q": "how to translate a string using the translation system",
+    "a": "var text = tr('GREETING')  # matches key in .po/.csv file"
+  },
+  {
+    "q": "how to add a translation at runtime",
+    "a": "var translation = load('res://translations/en.translation')\nTranslationServer.add_translation(translation)"
+  },
+  {
+    "q": "how to change the game language at runtime",
+    "a": "TranslationServer.set_locale('ja')"
+  },
+  {
+    "q": "how to get the current locale",
+    "a": "var locale = TranslationServer.get_locale()"
+  },
+  {
+    "q": "how to get a list of loaded locales",
+    "a": "var locales = TranslationServer.get_loaded_locales()"
+  },
+  {
+    "q": "how to check if a translation key exists",
+    "a": "var exists = TranslationServer.translate('MY_KEY') != 'MY_KEY'"
+  },
+  {
+    "q": "how to read a project setting at runtime",
+    "a": "var gravity = ProjectSettings.get_setting('physics/2d/default_gravity')"
+  },
+  {
+    "q": "how to set a project setting at runtime",
+    "a": "ProjectSettings.set_setting('display/window/size/width', 1920)"
+  },
+  {
+    "q": "how to check if a project setting exists",
+    "a": "if ProjectSettings.has_setting('my_game/score'):\n    print('setting exists')"
+  },
+  {
+    "q": "how to get the project name",
+    "a": "var name = ProjectSettings.get_setting('application/config/name')"
+  },
+  {
+    "q": "how to get the project version",
+    "a": "var version = ProjectSettings.get_setting('application/config/version')"
+  },
+  {
+    "q": "how to get the godot engine version dictionary",
+    "a": "var info = Engine.get_version_info()\nprint(info.major, '.', info.minor)"
+  },
+  {
+    "q": "how to get the number of physics frames per second",
+    "a": "var fps = Engine.physics_ticks_per_second"
+  },
+  {
+    "q": "how to set the maximum fps",
+    "a": "Engine.max_fps = 60"
+  },
+  {
+    "q": "how to get the time scale",
+    "a": "var ts = Engine.time_scale"
+  },
+  {
+    "q": "how to slow down time to half speed",
+    "a": "Engine.time_scale = 0.5"
+  },
+  {
+    "q": "how to restore normal time scale",
+    "a": "Engine.time_scale = 1.0"
+  },
+  {
+    "q": "how to get all nodes of a specific class in the tree",
+    "a": "var enemies = get_tree().get_nodes_in_group('enemies')"
+  },
+  {
+    "q": "how to get the scene tree root",
+    "a": "var root = get_tree().root"
+  },
+  {
+    "q": "how to check if the scene tree is paused",
+    "a": "if get_tree().paused:\n    print('game is paused')"
+  },
+  {
+    "q": "how to change scene to a preloaded scene",
+    "a": "var scene = preload('res://level2.tscn')\nget_tree().change_scene_to_packed(scene)"
+  },
+  {
+    "q": "how to call a function on all members of a group",
+    "a": "get_tree().call_group('enemies', 'disable')"
+  },
+  {
+    "q": "how to set a property on all members of a group",
+    "a": "get_tree().call_group('enemies', 'set', 'visible', false)"
+  },
+  {
+    "q": "how to notify all members of a group",
+    "a": "get_tree().notify_group('ui', NOTIFICATION_VISIBILITY_CHANGED)"
+  },
+  {
+    "q": "how to create a timer from the scene tree and autostart it",
+    "a": "var timer = get_tree().create_timer(2.0, false)\nawait timer.timeout"
+  },
+  {
+    "q": "how to count all nodes in the scene tree",
+    "a": "var count = get_tree().get_node_count()"
+  },
+  {
+    "q": "how to get the current scene",
+    "a": "var scene = get_tree().current_scene"
+  },
+  {
+    "q": "how to tween a color property",
+    "a": "var tween = create_tween()\ntween.tween_property($Sprite2D, 'modulate', Color.RED, 1.0)"
+  },
+  {
+    "q": "how to use tween_interval to add a delay",
+    "a": "var tween = create_tween()\ntween.tween_interval(0.5)\ntween.tween_property(self, 'position', Vector2(200,0), 1.0)"
+  },
+  {
+    "q": "how to call a function at the end of a tween",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'position', Vector2(200,0), 1.0)\ntween.tween_callback(on_tween_done)"
+  },
+  {
+    "q": "how to use ease in out on a tween",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'position', Vector2(200,0), 1.0).set_ease(Tween.EASE_IN_OUT)"
+  },
+  {
+    "q": "how to use a custom transition type on a tween",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'scale', Vector2(2,2), 0.5).set_trans(Tween.TRANS_BOUNCE)"
+  },
+  {
+    "q": "how to pause a tween",
+    "a": "my_tween.pause()"
+  },
+  {
+    "q": "how to resume a paused tween",
+    "a": "my_tween.play()"
+  },
+  {
+    "q": "how to stop and kill a tween",
+    "a": "my_tween.kill()"
+  },
+  {
+    "q": "how to check if a tween is still running",
+    "a": "if my_tween.is_running():\n    print('tween active')"
+  },
+  {
+    "q": "how to chain tweens sequentially",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'position:x', 200.0, 0.5)\ntween.tween_property(self, 'position:y', 200.0, 0.5)"
+  },
+  {
+    "q": "how to tween a sub-property like position x only",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'position:x', 500.0, 1.0)"
+  },
+  {
+    "q": "how to tween modulate alpha to fade out a node",
+    "a": "var tween = create_tween()\ntween.tween_property(self, 'modulate:a', 0.0, 1.0)"
+  },
+  {
+    "q": "how to preload a scene",
+    "a": "var EnemyScene = preload('res://enemy.tscn')"
+  },
+  {
+    "q": "how to load a scene at runtime",
+    "a": "var scene = load('res://enemy.tscn')\nvar enemy = scene.instantiate()"
+  },
+  {
+    "q": "how to load a texture at runtime",
+    "a": "var tex: Texture2D = load('res://icon.png')"
+  },
+  {
+    "q": "how to load a sound at runtime",
+    "a": "var sound: AudioStream = load('res://sounds/hit.wav')\n$AudioStreamPlayer.stream = sound"
+  },
+  {
+    "q": "how to check if a resource path is valid",
+    "a": "if ResourceLoader.exists('res://level.tscn'):\n    print('resource found')"
+  },
+  {
+    "q": "how to load a resource with a specific type hint",
+    "a": "var texture = ResourceLoader.load('res://icon.png', 'Texture2D')"
+  },
+  {
+    "q": "how to use ResourceLoader load_threaded_request",
+    "a": "ResourceLoader.load_threaded_request('res://big_level.tscn')\nawait get_tree().create_timer(0.1).timeout\nvar scene = ResourceLoader.load_threaded_get('res://big_level.tscn')"
+  },
+  {
+    "q": "how to get the load status of a threaded resource",
+    "a": "var status = ResourceLoader.load_threaded_get_status('res://big_level.tscn')"
+  },
+  {
+    "q": "how to use signal with parameters",
+    "a": "signal health_changed(old_health: int, new_health: int)\n\nfunc take_damage(amount: int):\n    var old = health\n    health -= amount\n    health_changed.emit(old, health)"
+  },
+  {
+    "q": "how to disconnect all connections from a signal",
+    "a": "for conn in health_changed.get_connections():\n    health_changed.disconnect(conn.callable)"
+  },
+  {
+    "q": "how to make a one-shot signal connection",
+    "a": "some_node.died.connect(_on_enemy_died, CONNECT_ONE_SHOT)"
+  },
+  {
+    "q": "how to make a deferred signal connection",
+    "a": "some_node.signal_name.connect(my_func, CONNECT_DEFERRED)"
+  },
+  {
+    "q": "how to emit a signal deferred",
+    "a": "call_deferred('emit_signal', 'my_signal')"
+  },
+  {
+    "q": "how to get the number of connections on a signal",
+    "a": "var count = my_signal.get_connections().size()"
+  },
+  {
+    "q": "how to get all slide collision results from move_and_slide",
+    "a": "move_and_slide()\nfor i in get_slide_collision_count():\n    var col = get_slide_collision(i)\n    print(col.get_collider())"
+  },
+  {
+    "q": "how to get the normal of a slide collision",
+    "a": "var col = get_slide_collision(0)\nvar normal = col.get_normal()"
+  },
+  {
+    "q": "how to detect if a characterbody2d is on a ceiling",
+    "a": "if is_on_ceiling():\n    velocity.y = 0"
+  },
+  {
+    "q": "how to detect if a characterbody2d is on a wall",
+    "a": "if is_on_wall():\n    print('against wall')"
+  },
+  {
+    "q": "how to set up_direction for characterbody2d",
+    "a": "up_direction = Vector2.UP"
+  },
+  {
+    "q": "how to set floor max angle for character body",
+    "a": "floor_max_angle = deg_to_rad(46)"
+  },
+  {
+    "q": "how to enable infinite inertia on characterbody3d",
+    "a": "motion_mode = CharacterBody3D.MOTION_MODE_GROUNDED"
+  },
+  {
+    "q": "how to apply gravity to a characterbody2d manually",
+    "a": "if not is_on_floor():\n    velocity.y += ProjectSettings.get_setting('physics/2d/default_gravity') * delta"
+  },
+  {
+    "q": "how to add coyote time for jumping",
+    "a": "var coyote_timer := 0.0\nconst COYOTE_TIME := 0.15\nfunc _physics_process(delta):\n    if is_on_floor():\n        coyote_timer = COYOTE_TIME\n    else:\n        coyote_timer -= delta\n    if Input.is_action_just_pressed('jump') and coyote_timer > 0:\n        velocity.y = JUMP_FORCE\n        coyote_timer = 0"
+  },
+  {
+    "q": "how to add jump buffering",
+    "a": "var jump_buffer := 0.0\nconst JUMP_BUFFER_TIME := 0.1\nfunc _physics_process(delta):\n    if Input.is_action_just_pressed('jump'):\n        jump_buffer = JUMP_BUFFER_TIME\n    jump_buffer -= delta\n    if jump_buffer > 0 and is_on_floor():\n        velocity.y = JUMP_FORCE\n        jump_buffer = 0"
+  },
+  {
+    "q": "how to implement variable jump height by releasing jump early",
+    "a": "if Input.is_action_just_released('jump') and velocity.y < 0:\n    velocity.y *= 0.5"
+  },
+  {
+    "q": "how to get all overlapping bodies in an area2d",
+    "a": "var bodies = $Area2D.get_overlapping_bodies()"
+  },
+  {
+    "q": "how to get all overlapping areas in an area2d",
+    "a": "var areas = $Area2D.get_overlapping_areas()"
+  },
+  {
+    "q": "how to check if an area2d overlaps a specific body",
+    "a": "if $Area2D.overlaps_body($Player):\n    print('player in area')"
+  },
+  {
+    "q": "how to check if an area2d overlaps another area",
+    "a": "if $Area2D.overlaps_area($OtherArea):\n    print('areas overlap')"
+  },
+  {
+    "q": "how to set monitoring on an area2d from code",
+    "a": "$Area2D.monitoring = true"
+  },
+  {
+    "q": "how to set monitorable on an area2d from code",
+    "a": "$Area2D.monitorable = true"
+  },
+  {
+    "q": "how to set priority on an area2d",
+    "a": "$Area2D.priority = 1"
+  },
+  {
+    "q": "how to check if a raycast2d is hitting something",
+    "a": "if $RayCast2D.is_colliding():\n    var obj = $RayCast2D.get_collider()"
+  },
+  {
+    "q": "how to set the target position of a raycast2d",
+    "a": "$RayCast2D.target_position = Vector2(0, 100)"
+  },
+  {
+    "q": "how to exclude a body from a raycast2d",
+    "a": "$RayCast2D.add_exception($Player)"
+  },
+  {
+    "q": "how to clear all raycast2d exceptions",
+    "a": "$RayCast2D.clear_exceptions()"
+  },
+  {
+    "q": "how to do a shapecast2d check",
+    "a": "$ShapeCast2D.force_shapecast_update()\nif $ShapeCast2D.is_colliding():\n    print('shape is overlapping something')"
+  },
+  {
+    "q": "how to get the number of shapecast2d collisions",
+    "a": "var count = $ShapeCast2D.get_collision_count()"
+  },
+  {
+    "q": "how to get a shapecast2d collider by index",
+    "a": "var body = $ShapeCast2D.get_collider(0)"
+  },
+  {
+    "q": "how to get the render texture of a subviewport as a texture",
+    "a": "var tex = $SubViewport.get_texture()"
+  },
+  {
+    "q": "how to render to a texture and apply to a sprite2d",
+    "a": "$Sprite2D.texture = $SubViewport.get_textured()"
+  },
+  {
+    "q": "how to get the size of the current viewport",
+    "a": "var size = get_viewport().get_visible_rect().size"
+  },
+  {
+    "q": "how to get the viewport texture as an image",
+    "a": "var img = get_viewport().get_texture().get_image()"
+  },
+  {
+    "q": "how to create a shader material in code",
+    "a": "var mat = ShaderMaterial.new()\nmat.shader = preload('res://myshader.gdshader')\n$MeshInstance3D.material_override = mat"
+  },
+  {
+    "q": "how to set a uniform on a shader material",
+    "a": "$MeshInstance3D.material_override.set_shader_parameter('speed', 2.0)"
+  },
+  {
+    "q": "how to get a uniform from a shader material",
+    "a": "var val = $MeshInstance3D.material_override.get_shader_parameter('speed')"
+  },
+  {
+    "q": "how to apply a canvas item material to a sprite2d",
+    "a": "var mat = CanvasItemMaterial.new()\nmat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD\n$Sprite2D.material = mat"
+  },
+  {
+    "q": "how to set albedo color on a standardsurface material",
+    "a": "var mat = StandardMaterial3D.new()\nmat.albedo_color = Color.RED\n$MeshInstance3D.material_override = mat"
+  },
+  {
+    "q": "how to enable emission on a standardsurface material",
+    "a": "var mat = $MeshInstance3D.mesh.surface_get_material(0)\nmat.emission_enabled = true\nmat.emission = Color(1, 0.5, 0)\nmat.emission_energy_multiplier = 2.0"
+  },
+  {
+    "q": "how to set transparency on a 3d material",
+    "a": "var mat = StandardMaterial3D.new()\nmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA\nmat.albedo_color.a = 0.5"
+  },
+  {
+    "q": "how to instantiate a scene and set its position",
+    "a": "var bullet = bullet_scene.instantiate()\nbullet.global_position = $Muzzle.global_position\nadd_child(bullet)"
+  },
+  {
+    "q": "how to instantiate a scene as a child of a specific node",
+    "a": "var enemy = enemy_scene.instantiate()\n$EnemyContainer.add_child(enemy)"
+  },
+  {
+    "q": "how to deferred add a child node",
+    "a": "call_deferred('add_child', new_node)"
+  },
+  {
+    "q": "how to limit the number of instances of a scene",
+    "a": "if $BulletContainer.get_child_count() < MAX_BULLETS:\n    var b = bullet_scene.instantiate()\n    $BulletContainer.add_child(b)"
+  },
+  {
+    "q": "how to find and remove all children from a node",
+    "a": "for child in $Container.get_children():\n    child.queue_free()"
+  },
+  {
+    "q": "how to detach a node from its parent without freeing it",
+    "a": "$MyNode.reparent(get_tree().root)"
+  },
+  {
+    "q": "how to access an autoload singleton from any script",
+    "a": "GameManager.score += 10"
+  },
+  {
+    "q": "how to store global game data in an autoload",
+    "a": "# In autoload script (e.g., GameData.gd):\nvar score: int = 0\nvar player_health: int = 100"
+  },
+  {
+    "q": "how to reset autoload data on new game",
+    "a": "# In autoload script:\nfunc reset():\n    score = 0\n    player_health = 100"
+  },
+  {
+    "q": "how to use a signal from an autoload",
+    "a": "GameManager.game_over.connect(_on_game_over)"
+  },
+  {
+    "q": "how to measure execution time of a function",
+    "a": "var start = Time.get_ticks_usec()\nmy_function()\nvar elapsed = Time.get_ticks_usec() - start\nprint('took ', elapsed, ' microseconds')"
+  },
+  {
+    "q": "how to use performance monitors in code",
+    "a": "var fps = Performance.get_monitor(Performance.TIME_FPS)\nvar draw_calls = Performance.get_monitor(Performance.RENDER_TOTAL_DRAW_CALLS_IN_FRAME)"
+  },
+  {
+    "q": "how to get the number of objects in the scene",
+    "a": "var count = Performance.get_monitor(Performance.OBJECT_COUNT)"
+  },
+  {
+    "q": "how to get the memory usage",
+    "a": "var mem = Performance.get_monitor(Performance.MEMORY_STATIC)"
+  },
+  {
+    "q": "how to spawn a 3d object at the players position",
+    "a": "var obj = scene.instantiate()\nobj.global_position = player.global_position\nadd_child(obj)"
+  },
+  {
+    "q": "how to get the forward vector of a node3d",
+    "a": "var forward = -global_transform.basis.z"
+  },
+  {
+    "q": "how to get the right vector of a node3d",
+    "a": "var right = global_transform.basis.x"
+  },
+  {
+    "q": "how to get the up vector of a node3d",
+    "a": "var up = global_transform.basis.y"
+  },
+  {
+    "q": "how to make a 3d object orbit around a point",
+    "a": "func _process(delta):\n    var angle = Time.get_ticks_msec() / 1000.0\n    position.x = cos(angle) * radius\n    position.z = sin(angle) * radius"
+  },
+  {
+    "q": "how to get screen position of a 3d object",
+    "a": "var screen_pos = get_viewport().get_camera_3d().unproject_position(global_position)"
+  },
+  {
+    "q": "how to check if a 3d object is visible from the camera",
+    "a": "var cam = get_viewport().get_camera_3d()\nif cam.is_position_in_frustum(global_position):\n    print('visible')"
+  },
+  {
+    "q": "how to set the near clip plane of a camera3d",
+    "a": "$Camera3D.near = 0.05"
+  },
+  {
+    "q": "how to set the far clip plane of a camera3d",
+    "a": "$Camera3D.far = 1000.0"
+  },
+  {
+    "q": "how to set the fov of a camera3d",
+    "a": "$Camera3D.fov = 75.0"
+  },
+  {
+    "q": "how to set the camera3d to orthogonal projection",
+    "a": "$Camera3D.projection = Camera3D.PROJECTION_ORTHOGONAL"
+  },
+  {
+    "q": "how to create a capsule collision shape in code",
+    "a": "var shape = CapsuleShape2D.new()\nshape.radius = 20.0\nshape.height = 60.0\n$CollisionShape2D.shape = shape"
+  },
+  {
+    "q": "how to create a circle collision shape in code",
+    "a": "var shape = CircleShape2D.new()\nshape.radius = 32.0\n$CollisionShape2D.shape = shape"
+  },
+  {
+    "q": "how to create a rectangle collision shape in code",
+    "a": "var shape = RectangleShape2D.new()\nshape.size = Vector2(64, 64)\n$CollisionShape2D.shape = shape"
+  },
+  {
+    "q": "how to create a physics material for bouncing",
+    "a": "var phys_mat = PhysicsMaterial.new()\nphys_mat.bounce = 0.8\nphys_mat.friction = 0.1\n$RigidBody2D.physics_material_override = phys_mat"
+  },
+  {
+    "q": "how to send data to a specific peer using rpc",
+    "a": "rpc_id(peer_id, 'receive_data', my_data)"
+  },
+  {
+    "q": "how to check if the game is running as a server",
+    "a": "if multiplayer.is_server():\n    print('this is the server')"
+  },
+  {
+    "q": "how to set the max clients allowed on a server",
+    "a": "var peer = ENetMultiplayerPeer.new()\npeer.create_server(7777, 4)  # max 4 clients\nmultiplayer.multiplayer_peer = peer"
+  },
+  {
+    "q": "how to handle a peer connecting to server",
+    "a": "multiplayer.peer_connected.connect(_on_peer_connected)\nfunc _on_peer_connected(id):\n    print('peer connected: ', id)"
+  },
+  {
+    "q": "how to handle a peer disconnecting from server",
+    "a": "multiplayer.peer_disconnected.connect(_on_peer_disconnected)\nfunc _on_peer_disconnected(id):\n    print('peer disconnected: ', id)"
+  },
+  {
+    "q": "how to use websocket in godot 4",
+    "a": "var socket = WebSocketPeer.new()\nsocket.connect_to_url('wss://example.com')\nfunc _process(_delta):\n    socket.poll()\n    if socket.get_ready_state() == WebSocketPeer.STATE_OPEN:\n        var packet = socket.get_packet()\n        print(packet.get_string_from_utf8())"
+  },
+  {
+    "q": "how to send text over a websocket",
+    "a": "socket.send_text('hello server')"
+  },
+  {
+    "q": "how to make a script run in the godot editor",
+    "a": "@tool\nextends Node\n\nfunc _ready():\n    print('running in editor')"
+  },
+  {
+    "q": "how to update a tool script when a property changes in editor",
+    "a": "@tool\nextends Node\n@export var my_val: float = 1.0 :\n    set(v):\n        my_val = v\n        queue_redraw()"
+  },
+  {
+    "q": "how to use @tool and draw in the editor viewport",
+    "a": "@tool\nextends Node2D\nfunc _draw():\n    draw_circle(Vector2.ZERO, 20.0, Color.CYAN)"
+  },
+  {
+    "q": "how to call a method only when not in the editor",
+    "a": "if not Engine.is_editor_hint():\n    start_game()"
+  },
+  {
+    "q": "how to get editor settings from a plugin",
+    "a": "var settings = EditorInterface.get_editor_settings()\nvar theme = settings.get_setting('interface/theme/preset')"
+  },
+  {
+    "q": "how to set a node's owner for it to be saved in a scene",
+    "a": "new_node.owner = get_tree().edited_scene_root"
+  },
+  {
+    "q": "how to get a node by its unique name using percent sign",
+    "a": "var player = %Player"
+  },
+  {
+    "q": "how to print the entire scene tree to console",
+    "a": "print_tree()"
+  },
+  {
+    "q": "how to print the scene tree with properties",
+    "a": "print_tree_pretty()"
+  },
+  {
+    "q": "how to set a node as top level so it ignores parent transform",
+    "a": "$Sprite2D.top_level = true"
+  },
+  {
+    "q": "how to get the path of a node as a string",
+    "a": "var path = get_path()"
+  },
+  {
+    "q": "how to get a node using a NodePath",
+    "a": "var node = get_node(NodePath('Player/Sprite2D'))"
+  },
+  {
+    "q": "how to check how many times _process has been called",
+    "a": "var frame = Engine.get_process_frames()"
+  },
+  {
+    "q": "how to save a dictionary to a json file",
+    "a": "var data = {'score': 100, 'level': 3}\nvar file = FileAccess.open('user://save.json', FileAccess.WRITE)\nfile.store_string(JSON.stringify(data))\nfile.close()"
+  },
+  {
+    "q": "how to load a dictionary from a json file",
+    "a": "var file = FileAccess.open('user://save.json', FileAccess.READ)\nvar data = JSON.parse_string(file.get_as_text())\nfile.close()"
+  },
+  {
+    "q": "how to save a resource to disk",
+    "a": "ResourceSaver.save(my_resource, 'user://data.tres')"
+  },
+  {
+    "q": "how to load a resource from user data",
+    "a": "var res = ResourceLoader.load('user://data.tres')"
+  },
+  {
+    "q": "how to get the user data directory path",
+    "a": "var path = OS.get_user_data_dir()"
+  },
+  {
+    "q": "how to write a line to a log file",
+    "a": "var log = FileAccess.open('user://log.txt', FileAccess.WRITE)\nlog.store_line('Game started')\nlog.close()"
+  },
+  {
+    "q": "how to format a float to 2 decimal places as a string",
+    "a": "var s = '%.2f' % my_float"
+  },
+  {
+    "q": "how to convert an integer to binary string",
+    "a": "var bin_str = '%b' % my_int"
+  },
+  {
+    "q": "how to convert an integer to hexadecimal string",
+    "a": "var hex_str = '%x' % my_int"
+  },
+  {
+    "q": "how to use modulo to create a ping pong index",
+    "a": "var idx = frame_count % array.size()"
+  },
+  {
+    "q": "how to get a 2d vector pointing from a to b",
+    "a": "var dir = (b - a).normalized()"
+  },
+  {
+    "q": "how to compute the angle between two vectors",
+    "a": "var angle = a.angle_to(b)"
+  },
+  {
+    "q": "how to rotate toward a target angle smoothly",
+    "a": "rotation = lerp_angle(rotation, target_angle, 5.0 * delta)"
+  },
+  {
+    "q": "how to convert a 2d position to 3d position in xz plane",
+    "a": "var pos3d = Vector3(pos2d.x, 0, pos2d.y)"
+  },
+  {
+    "q": "how to use packed arrays for better performance",
+    "a": "var positions = PackedVector2Array()\npositions.append(Vector2(10, 20))"
+  },
+  {
+    "q": "how to use a typed array in gdscript 4",
+    "a": "var enemies: Array[Node2D] = []"
+  },
+  {
+    "q": "how to print all keys and values of a dictionary",
+    "a": "for key in my_dict:\n    print(key, ': ', my_dict[key])"
+  },
+  {
+    "q": "how to deep clone a nested dictionary",
+    "a": "var clone = my_dict.duplicate(true)"
+  },
+  {
+    "q": "how to check if a number is nan",
+    "a": "if is_nan(value):\n    print('value is NaN')"
+  },
+  {
+    "q": "how to check if a number is infinite",
+    "a": "if is_inf(value):\n    print('value is infinite')"
+  },
+  {
+    "q": "how to use bitwise and in gdscript",
+    "a": "var result = flags & MASK_JUMP"
+  },
+  {
+    "q": "how to use bitwise or in gdscript",
+    "a": "flags = flags | MASK_RUN"
+  },
+  {
+    "q": "how to use bitwise xor in gdscript",
+    "a": "flags = flags ^ MASK_WALK"
+  },
+  {
+    "q": "how to use bitwise not in gdscript",
+    "a": "var inv = ~flags"
+  },
+  {
+    "q": "how to use bit shift left",
+    "a": "var shifted = 1 << 4  # equals 16"
+  },
+  {
+    "q": "how to use bit shift right",
+    "a": "var shifted = 256 >> 4  # equals 16"
+  },
+  {
+    "q": "how to check if a flag bit is set",
+    "a": "if flags & MASK_JUMP:\n    print('jump flag is set')"
+  },
+  {
+    "q": "how to set a flag bit",
+    "a": "flags |= MASK_JUMP"
+  },
+  {
+    "q": "how to clear a flag bit",
+    "a": "flags &= ~MASK_JUMP"
+  },
+  {
+    "q": "how to toggle a flag bit",
+    "a": "flags ^= MASK_JUMP"
+  },
+  {
+    "q": "how to change the font of a label in code",
+    "a": "$Label.add_theme_font_override('font', preload('res://font.ttf'))"
+  },
+  {
+    "q": "how to change the font size of a label in code",
+    "a": "$Label.add_theme_font_size_override('font_size', 24)"
+  },
+  {
+    "q": "how to set text alignment in a label",
+    "a": "$Label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER"
+  },
+  {
+    "q": "how to enable text wrapping in a label",
+    "a": "$Label.autowrap_mode = TextServer.AUTOWRAP_WORD"
+  },
+  {
+    "q": "how to set a label to clip its text",
+    "a": "$Label.clip_text = true"
+  },
+  {
+    "q": "how to set a panel background color via stylebox",
+    "a": "var style = StyleBoxFlat.new()\nstyle.bg_color = Color(0.1, 0.1, 0.1)\n$Panel.add_theme_stylebox_override('panel', style)"
+  },
+  {
+    "q": "how to set panel border radius via stylebox",
+    "a": "var style = StyleBoxFlat.new()\nstyle.corner_radius_top_left = 10\nstyle.corner_radius_top_right = 10\n$Panel.add_theme_stylebox_override('panel', style)"
+  },
+  {
+    "q": "how to set a button flat style",
+    "a": "$Button.flat = true"
+  },
+  {
+    "q": "how to get if a button is being held down",
+    "a": "if $Button.button_pressed:\n    print('button held')"
+  },
+  {
+    "q": "how to toggle a button",
+    "a": "$Button.toggle_mode = true"
+  },
+  {
+    "q": "how to set a button icon",
+    "a": "$Button.icon = preload('res://icon.png')"
+  },
+  {
+    "q": "how to set a texture rect to stretch",
+    "a": "$TextureRect.stretch_mode = TextureRect.STRETCH_SCALE"
+  },
+  {
+    "q": "how to set a texture rect to keep aspect",
+    "a": "$TextureRect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED"
+  },
+  {
+    "q": "how to change the pivot offset of a control node",
+    "a": "$Control.pivot_offset = $Control.size / 2.0"
+  },
+  {
+    "q": "how to animate a control node rotating around its center",
+    "a": "$Control.pivot_offset = $Control.size / 2.0\nvar tween = create_tween().set_loops()\ntween.tween_property($Control, 'rotation', TAU, 2.0)"
+  },
+  {
+    "q": "how to get a bone2d node from skeleton2d",
+    "a": "var bone = $Skeleton2D.get_bone(0)"
+  },
+  {
+    "q": "how to get the number of bones in a skeleton2d",
+    "a": "var count = $Skeleton2D.get_bone_count()"
+  },
+  {
+    "q": "how to implement a simple inventory using a dictionary",
+    "a": "var inventory: Dictionary = {}\nfunc add_item(item_name: String, count: int = 1):\n    if item_name in inventory:\n        inventory[item_name] += count\n    else:\n        inventory[item_name] = count"
+  },
+  {
+    "q": "how to remove an item from a dictionary inventory",
+    "a": "func remove_item(item_name: String, count: int = 1):\n    if item_name in inventory:\n        inventory[item_name] -= count\n        if inventory[item_name] <= 0:\n            inventory.erase(item_name)"
+  },
+  {
+    "q": "how to check if a player has a specific item in inventory",
+    "a": "func has_item(item_name: String) -> bool:\n    return item_name in inventory and inventory[item_name] > 0"
+  },
+  {
+    "q": "how to implement a simple object pool in gdscript",
+    "a": "var pool: Array[Node] = []\nfunc get_from_pool() -> Node:\n    if pool.is_empty():\n        return my_scene.instantiate()\n    return pool.pop_back()\nfunc return_to_pool(obj: Node):\n    obj.hide()\n    pool.append(obj)"
+  },
+  {
+    "q": "how to start a timer node from code",
+    "a": "$Timer.start()"
+  },
+  {
+    "q": "how to stop a timer node from code",
+    "a": "$Timer.stop()"
+  },
+  {
+    "q": "how to set a timer to one shot mode",
+    "a": "$Timer.one_shot = true"
+  },
+  {
+    "q": "how to get the time left on a timer",
+    "a": "var remaining = $Timer.time_left"
+  },
+  {
+    "q": "how to connect the timer timeout signal",
+    "a": "$Timer.timeout.connect(_on_timer_timeout)"
   }
 ]
