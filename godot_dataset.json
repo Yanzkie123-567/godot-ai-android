@@ -6484,5 +6484,2016 @@
   {
     "q": "how to connect the timer timeout signal",
     "a": "$Timer.timeout.connect(_on_timer_timeout)"
+  },
+  {
+    "q": "how to use a lambda function in gdscript 4",
+    "a": "var add = func(a, b): return a + b\nprint(add.call(3, 4))"
+  },
+  {
+    "q": "how to use a callable to call a function later",
+    "a": "var fn: Callable = my_function\nfn.call()"
+  },
+  {
+    "q": "how to store a method reference in a variable",
+    "a": "var method_ref: Callable = self.my_method\nmethod_ref.call()"
+  },
+  {
+    "q": "how to use typed arrays in gdscript 4",
+    "a": "var scores: Array[int] = [10, 20, 30]"
+  },
+  {
+    "q": "how to use a dictionary with type hints",
+    "a": "var data: Dictionary = {\"name\": \"hero\", \"hp\": 100}"
+  },
+  {
+    "q": "how to filter an array in gdscript",
+    "a": "var evens = [1,2,3,4,6].filter(func(x): return x % 2 == 0)"
+  },
+  {
+    "q": "how to map over an array in gdscript",
+    "a": "var doubled = [1,2,3].map(func(x): return x * 2)"
+  },
+  {
+    "q": "how to reduce an array to a single value",
+    "a": "var total = [1,2,3,4].reduce(func(acc, x): return acc + x, 0)"
+  },
+  {
+    "q": "how to sort an array with a custom comparator",
+    "a": "arr.sort_custom(func(a, b): return a.score > b.score)"
+  },
+  {
+    "q": "how to check if any element in array matches a condition",
+    "a": "var has_enemy = units.any(func(u): return u.is_enemy)"
+  },
+  {
+    "q": "how to check if all elements in array match a condition",
+    "a": "var all_alive = units.all(func(u): return u.hp > 0)"
+  },
+  {
+    "q": "how to use match with multiple values on one branch",
+    "a": "match direction:\n    \"left\", \"right\":\n        move_horizontal()\n    \"up\", \"down\":\n        move_vertical()"
+  },
+  {
+    "q": "how to use match with a guard clause",
+    "a": "match value:\n    var x when x > 10:\n        print(\"big: \", x)"
+  },
+  {
+    "q": "how to use match to destructure an array",
+    "a": "match point:\n    [var x, var y]:\n        print(x, y)"
+  },
+  {
+    "q": "how to use match to destructure a dictionary",
+    "a": "match data:\n    {\"type\": var t}:\n        print(t)"
+  },
+  {
+    "q": "how to use string format with placeholders",
+    "a": "var msg = \"Hello %s, you have %d coins\" % [player_name, coins]"
+  },
+  {
+    "q": "how to format a float to 2 decimal places",
+    "a": "var s = \"%.2f\" % 3.14159"
+  },
+  {
+    "q": "how to convert a string to int",
+    "a": "var n: int = int(\"42\")"
+  },
+  {
+    "q": "how to convert a string to float",
+    "a": "var f: float = float(\"3.14\")"
+  },
+  {
+    "q": "how to convert int to string",
+    "a": "var s: String = str(100)"
+  },
+  {
+    "q": "how to check if a string contains a substring",
+    "a": "if my_string.contains(\"hello\"):\n    print(\"found\")"
+  },
+  {
+    "q": "how to split a string by delimiter",
+    "a": "var parts: Array = \"a,b,c\".split(\",\")"
+  },
+  {
+    "q": "how to check if a string starts with a prefix",
+    "a": "if path.begins_with(\"res://\"):\n    print(\"valid path\")"
+  },
+  {
+    "q": "how to check if a string ends with a suffix",
+    "a": "if filename.ends_with(\".png\"):\n    print(\"is image\")"
+  },
+  {
+    "q": "how to convert a string to lowercase",
+    "a": "var lower = my_string.to_lower()"
+  },
+  {
+    "q": "how to convert a string to uppercase",
+    "a": "var upper = my_string.to_upper()"
+  },
+  {
+    "q": "how to use a regex to match a pattern",
+    "a": "var regex = RegEx.new()\nregex.compile(\"\\\\d+\")\nvar result = regex.search(\"abc123\")\nif result:\n    print(result.get_string())"
+  },
+  {
+    "q": "how to use a packed string array",
+    "a": "var names: PackedStringArray = PackedStringArray([\"Alice\", \"Bob\"])"
+  },
+  {
+    "q": "how to use a packed float32 array",
+    "a": "var floats: PackedFloat32Array = PackedFloat32Array([1.0, 2.0, 3.0])"
+  },
+  {
+    "q": "how to use a packed vector2 array",
+    "a": "var points: PackedVector2Array = PackedVector2Array([Vector2(0,0), Vector2(1,1)])"
+  },
+  {
+    "q": "how to use a packed int32 array",
+    "a": "var ints: PackedInt32Array = PackedInt32Array([1, 2, 3])"
+  },
+  {
+    "q": "how to append to a packed array",
+    "a": "var arr = PackedInt32Array()\narr.append(10)"
+  },
+  {
+    "q": "how to iterate over a dictionary",
+    "a": "for key in my_dict:\n    print(key, \": \", my_dict[key])"
+  },
+  {
+    "q": "how to get all keys from a dictionary",
+    "a": "var keys = my_dict.keys()"
+  },
+  {
+    "q": "how to get all values from a dictionary",
+    "a": "var values = my_dict.values()"
+  },
+  {
+    "q": "how to check if dictionary has a key",
+    "a": "if my_dict.has(\"score\"):\n    print(my_dict[\"score\"])"
+  },
+  {
+    "q": "how to get a dictionary value with a default",
+    "a": "var hp = stats.get(\"hp\", 100)"
+  },
+  {
+    "q": "how to erase a key from a dictionary",
+    "a": "my_dict.erase(\"old_key\")"
+  },
+  {
+    "q": "how to duplicate a dictionary deeply",
+    "a": "var copy = original.duplicate(true)"
+  },
+  {
+    "q": "how to use typed dictionary in gdscript 4.3",
+    "a": "var inventory: Dictionary[String, int] = {\"sword\": 1, \"potion\": 5}"
+  },
+  {
+    "q": "how to use @warning_ignore annotation",
+    "a": "@warning_ignore(\"unused_variable\")\nvar debug_info = \"test\""
+  },
+  {
+    "q": "how to use assert with a message",
+    "a": "assert(health >= 0, \"Health cannot be negative\")"
+  },
+  {
+    "q": "how to check if a variable is of a specific class",
+    "a": "if node is CharacterBody2D:\n    print(\"is character\")"
+  },
+  {
+    "q": "how to use is_instance_of for type checking",
+    "a": "if is_instance_of(obj, MyClass):\n    print(\"correct type\")"
+  },
+  {
+    "q": "how to use a weak reference",
+    "a": "var weak_ref = weakref(my_node)\nif weak_ref.get_ref():\n    weak_ref.get_ref().do_something()"
+  },
+  {
+    "q": "how to use @onready with multiple nodes",
+    "a": "@onready var sprite: Sprite2D = $Sprite2D\n@onready var col: CollisionShape2D = $CollisionShape2D"
+  },
+  {
+    "q": "how to define a virtual method",
+    "a": "func _my_virtual_method() -> void:\n    pass  # Override in subclass"
+  },
+  {
+    "q": "how to call a parent class method",
+    "a": "super._ready()\nsuper.take_damage(amount)"
+  },
+  {
+    "q": "how to use set and get for a property",
+    "a": "var _speed: float = 100.0\nvar speed: float:\n    get: return _speed\n    set(v): _speed = clamp(v, 0.0, 500.0)"
+  },
+  {
+    "q": "how to define a class constant",
+    "a": "const MAX_HEALTH: int = 100\nconst GRAVITY: float = 980.0"
+  },
+  {
+    "q": "how to define a typed signal",
+    "a": "signal health_changed(old_value: int, new_value: int)"
+  },
+  {
+    "q": "how to use await with a signal",
+    "a": "await animation_player.animation_finished\nprint(\"animation done\")"
+  },
+  {
+    "q": "how to create a coroutine function in gdscript",
+    "a": "func do_sequence() -> void:\n    move_to(target)\n    await animation_player.animation_finished\n    attack()"
+  },
+  {
+    "q": "how to use is_nan to check for invalid floats",
+    "a": "if is_nan(value):\n    value = 0.0"
+  },
+  {
+    "q": "how to use is_inf to check for infinity",
+    "a": "if is_inf(value):\n    value = INF"
+  },
+  {
+    "q": "how to use clamp on a value",
+    "a": "var safe_hp = clamp(hp, 0, max_hp)"
+  },
+  {
+    "q": "how to use clampf for float values",
+    "a": "var clamped = clampf(speed, 0.0, max_speed)"
+  },
+  {
+    "q": "how to use clampi for integer values",
+    "a": "var clamped = clampi(index, 0, array.size() - 1)"
+  },
+  {
+    "q": "how to use lerp to interpolate floats",
+    "a": "var current = lerp(start, end, t)"
+  },
+  {
+    "q": "how to use lerp_angle to interpolate rotation",
+    "a": "var angle = lerp_angle(from_angle, to_angle, t)"
+  },
+  {
+    "q": "how to use move_toward for smooth movement",
+    "a": "speed = move_toward(speed, target_speed, acceleration * delta)"
+  },
+  {
+    "q": "how to use rotate_toward for smooth rotation",
+    "a": "rotation = rotate_toward(rotation, target_rotation, angular_speed * delta)"
+  },
+  {
+    "q": "how to use smoothstep for easing",
+    "a": "var t = smoothstep(0.0, 1.0, progress)"
+  },
+  {
+    "q": "how to use ease function for animation curves",
+    "a": "var t = ease(progress, 2.0)  # positive = ease-in, negative = ease-out"
+  },
+  {
+    "q": "how to use cubic_interpolate",
+    "a": "var pos = start.cubic_interpolate(end, control1, control2, t)"
+  },
+  {
+    "q": "how to use bezier_interpolate",
+    "a": "var v = bezier_interpolate(0.0, 1.0, 0.0, 1.0, t)"
+  },
+  {
+    "q": "how to use snapped to snap a value to a step",
+    "a": "var snapped = snapped(position.x, 16.0)"
+  },
+  {
+    "q": "how to use posmod for positive modulo",
+    "a": "var idx = posmod(current_index - 1, total)"
+  },
+  {
+    "q": "how to use fposmod for float positive modulo",
+    "a": "var angle = fposmod(current_angle, TAU)"
+  },
+  {
+    "q": "how to use wrap to wrap a value between min and max",
+    "a": "var looped = wrapi(frame, 0, frame_count)"
+  },
+  {
+    "q": "how to use ping pong interpolation",
+    "a": "var t = pingpong(time, duration)"
+  },
+  {
+    "q": "how to use sin and cos for circular movement",
+    "a": "position.x = center.x + cos(angle) * radius\nposition.y = center.y + sin(angle) * radius"
+  },
+  {
+    "q": "how to round a float to nearest integer",
+    "a": "var r = roundi(3.7)  # returns 4"
+  },
+  {
+    "q": "how to floor a float",
+    "a": "var f = floori(3.9)  # returns 3"
+  },
+  {
+    "q": "how to ceil a float",
+    "a": "var c = ceili(3.1)  # returns 4"
+  },
+  {
+    "q": "how to get the power of a number",
+    "a": "var p = pow(2.0, 10.0)  # 1024"
+  },
+  {
+    "q": "how to get the log of a number",
+    "a": "var l = log(100.0)"
+  },
+  {
+    "q": "how to get the max of two values",
+    "a": "var m = max(a, b)"
+  },
+  {
+    "q": "how to get the min of two values",
+    "a": "var m = min(a, b)"
+  },
+  {
+    "q": "how to use maxf and minf for floats",
+    "a": "var biggest = maxf(3.14, 2.71)"
+  },
+  {
+    "q": "how to use maxi and mini for integers",
+    "a": "var smallest = mini(10, 5)"
+  },
+  {
+    "q": "how to normalize a vector2",
+    "a": "var dir = velocity.normalized()"
+  },
+  {
+    "q": "how to get the length of a vector2",
+    "a": "var dist = velocity.length()"
+  },
+  {
+    "q": "how to get the squared length of a vector2",
+    "a": "var sq_dist = offset.length_squared()"
+  },
+  {
+    "q": "how to get the cross product of two vector2",
+    "a": "var c = a.cross(b)"
+  },
+  {
+    "q": "how to get the angle of a vector2",
+    "a": "var angle = velocity.angle()"
+  },
+  {
+    "q": "how to get the angle between two vector2",
+    "a": "var angle = a.angle_to(b)"
+  },
+  {
+    "q": "how to rotate a vector2 by an angle",
+    "a": "var rotated = velocity.rotated(PI / 2)"
+  },
+  {
+    "q": "how to reflect a vector2 off a normal",
+    "a": "var reflected = velocity.reflect(normal)"
+  },
+  {
+    "q": "how to slide a vector2 along a normal",
+    "a": "var slid = velocity.slide(normal)"
+  },
+  {
+    "q": "how to project a vector2 onto another",
+    "a": "var proj = a.project(b)"
+  },
+  {
+    "q": "how to bounce a vector2 off a surface",
+    "a": "var bounced = velocity.bounce(surface_normal)"
+  },
+  {
+    "q": "how to linearly interpolate two vector2",
+    "a": "var mid = a.lerp(b, 0.5)"
+  },
+  {
+    "q": "how to cubic interpolate two vector2",
+    "a": "var p = a.cubic_interpolate(b, pre_a, post_b, t)"
+  },
+  {
+    "q": "how to get the direction from one point to another",
+    "a": "var dir = (target.global_position - global_position).normalized()"
+  },
+  {
+    "q": "how to get the distance between two vector2",
+    "a": "var dist = pos_a.distance_to(pos_b)"
+  },
+  {
+    "q": "how to get the squared distance between two vector2",
+    "a": "var sq = pos_a.distance_squared_to(pos_b)"
+  },
+  {
+    "q": "how to limit the length of a vector2",
+    "a": "var capped = velocity.limit_length(max_speed)"
+  },
+  {
+    "q": "how to construct a vector2 from angle and length",
+    "a": "var v = Vector2.from_angle(angle) * length"
+  },
+  {
+    "q": "how to use vector2.zero and vector2.one",
+    "a": "velocity = Vector2.ZERO\nscale = Vector2.ONE"
+  },
+  {
+    "q": "how to use vector3 up down left right",
+    "a": "var up = Vector3.UP\nvar forward = Vector3.FORWARD"
+  },
+  {
+    "q": "how to get a basis vector from a transform",
+    "a": "var forward = transform.basis.z"
+  },
+  {
+    "q": "how to transform a vector by a basis",
+    "a": "var world_dir = transform.basis * local_dir"
+  },
+  {
+    "q": "how to use transform.looking_at",
+    "a": "transform = transform.looking_at(target_position, Vector3.UP)"
+  },
+  {
+    "q": "how to use global_transform vs transform",
+    "a": "# transform = local, global_transform = world space\nvar world_pos = global_transform.origin"
+  },
+  {
+    "q": "how to move a node toward a target position in 3d",
+    "a": "global_position = global_position.move_toward(target.global_position, speed * delta)"
+  },
+  {
+    "q": "how to implement coyote time for platformer jump",
+    "a": "var coyote_timer: float = 0.0\nconst COYOTE_TIME: float = 0.12\nif is_on_floor():\n    coyote_timer = COYOTE_TIME\nelse:\n    coyote_timer -= delta\nif coyote_timer > 0.0 and Input.is_action_just_pressed(\"jump\"):\n    velocity.y = JUMP_VELOCITY"
+  },
+  {
+    "q": "how to implement jump buffering in a platformer",
+    "a": "var jump_buffer: float = 0.0\nconst JUMP_BUFFER_TIME: float = 0.1\nif Input.is_action_just_pressed(\"jump\"):\n    jump_buffer = JUMP_BUFFER_TIME\njump_buffer -= delta\nif is_on_floor() and jump_buffer > 0.0:\n    velocity.y = JUMP_VELOCITY\n    jump_buffer = 0.0"
+  },
+  {
+    "q": "how to apply variable jump height by releasing early",
+    "a": "if Input.is_action_just_released(\"jump\") and velocity.y < 0:\n    velocity.y *= 0.5"
+  },
+  {
+    "q": "how to apply gravity scale per character",
+    "a": "velocity.y += GRAVITY * gravity_scale * delta"
+  },
+  {
+    "q": "how to make a character wall jump",
+    "a": "if is_on_wall() and Input.is_action_just_pressed(\"jump\"):\n    var wall_normal = get_wall_normal()\n    velocity = wall_normal * WALL_JUMP_HORIZONTAL + Vector2.UP * JUMP_VELOCITY"
+  },
+  {
+    "q": "how to make a character wall slide",
+    "a": "if is_on_wall() and not is_on_floor() and velocity.y > 0:\n    velocity.y = min(velocity.y, WALL_SLIDE_SPEED)"
+  },
+  {
+    "q": "how to detect landing after a fall",
+    "a": "if not was_on_floor and is_on_floor():\n    emit_signal(\"landed\", abs(fall_velocity))\nwas_on_floor = is_on_floor()"
+  },
+  {
+    "q": "how to implement acceleration and friction for movement",
+    "a": "var direction = Input.get_axis(\"move_left\", \"move_right\")\nif direction != 0:\n    velocity.x = move_toward(velocity.x, direction * MAX_SPEED, ACCELERATION * delta)\nelse:\n    velocity.x = move_toward(velocity.x, 0, FRICTION * delta)"
+  },
+  {
+    "q": "how to make a rigidbody2d follow the mouse",
+    "a": "var force = (get_global_mouse_position() - global_position) * 500.0\napply_central_force(force)"
+  },
+  {
+    "q": "how to rotate a characterbody2d to face movement direction",
+    "a": "if velocity.length() > 10:\n    rotation = velocity.angle()"
+  },
+  {
+    "q": "how to add screen-wrap to a moving body",
+    "a": "var vp = get_viewport_rect()\nif global_position.x > vp.end.x: global_position.x = vp.position.x\nelif global_position.x < vp.position.x: global_position.x = vp.end.x\nif global_position.y > vp.end.y: global_position.y = vp.position.y\nelif global_position.y < vp.position.y: global_position.y = vp.end.y"
+  },
+  {
+    "q": "how to implement knockback on a character",
+    "a": "func apply_knockback(direction: Vector2, force: float) -> void:\n    velocity += direction.normalized() * force"
+  },
+  {
+    "q": "how to implement invincibility frames after taking damage",
+    "a": "var invincible: bool = false\nvar invincible_timer: float = 0.0\nfunc take_damage(amount: int) -> void:\n    if invincible: return\n    health -= amount\n    invincible = true\n    invincible_timer = 1.0\nfunc _process(delta):\n    if invincible:\n        invincible_timer -= delta\n        if invincible_timer <= 0:\n            invincible = false"
+  },
+  {
+    "q": "how to detect if a characterbody2d is sliding on a slope",
+    "a": "if is_on_floor() and get_floor_normal().y < 0.9:\n    print(\"on slope\")"
+  },
+  {
+    "q": "how to make a top-down character aim toward the mouse",
+    "a": "look_at(get_global_mouse_position())"
+  },
+  {
+    "q": "how to keep an object at a fixed distance from another",
+    "a": "var offset = (global_position - pivot.global_position).normalized() * distance\nglobal_position = pivot.global_position + offset"
+  },
+  {
+    "q": "how to make a basic first person controller in godot 4",
+    "a": "func _input(event):\n    if event is InputEventMouseMotion:\n        rotate_y(-event.relative.x * mouse_sensitivity)\n        $Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)\n        $Camera3D.rotation.x = clamp($Camera3D.rotation.x, -PI/2, PI/2)\nfunc _physics_process(delta):\n    var dir = Vector3.ZERO\n    dir.x = Input.get_axis(\"move_left\", \"move_right\")\n    dir.z = Input.get_axis(\"move_forward\", \"move_back\")\n    velocity.x = (transform.basis * dir).x * speed\n    velocity.z = (transform.basis * dir).z * speed\n    if not is_on_floor(): velocity.y -= gravity * delta\n    if is_on_floor() and Input.is_action_just_pressed(\"jump\"): velocity.y = jump_velocity\n    move_and_slide()"
+  },
+  {
+    "q": "how to make a third person camera follow a target in 3d",
+    "a": "@export var target: Node3D\n@export var offset: Vector3 = Vector3(0, 2, 4)\nfunc _process(delta):\n    global_position = global_position.lerp(target.global_position + offset, 10.0 * delta)\n    look_at(target.global_position + Vector3.UP, Vector3.UP)"
+  },
+  {
+    "q": "how to rotate a 3d character to face movement direction",
+    "a": "if velocity.length() > 0.1:\n    var target_angle = atan2(velocity.x, velocity.z)\n    rotation.y = lerp_angle(rotation.y, target_angle, 10.0 * delta)"
+  },
+  {
+    "q": "how to make a 3d character strafe without rotating",
+    "a": "var input = Vector3(Input.get_axis(\"move_left\",\"move_right\"), 0, Input.get_axis(\"move_forward\",\"move_back\"))\nvelocity = (transform.basis * input).normalized() * speed"
+  },
+  {
+    "q": "how to make a character controller with momentum in 3d",
+    "a": "var wish_dir = (transform.basis * input_dir).normalized()\nif is_on_floor():\n    velocity.x = lerp(velocity.x, wish_dir.x * speed, acceleration * delta)\n    velocity.z = lerp(velocity.z, wish_dir.z * speed, acceleration * delta)\nelse:\n    velocity.x = lerp(velocity.x, wish_dir.x * speed, air_control * delta)\n    velocity.z = lerp(velocity.z, wish_dir.z * speed, air_control * delta)"
+  },
+  {
+    "q": "how to add headbob to a first person camera",
+    "a": "var t: float = 0.0\nfunc _process(delta):\n    if is_moving:\n        t += delta * bob_frequency\n        $Camera3D.position.y = sin(t) * bob_amplitude"
+  },
+  {
+    "q": "how to make a camera spring arm avoid walls in 3d",
+    "a": "# Use SpringArm3D node; set spring_length and collision_mask\n$SpringArm3D.spring_length = 4.0\n$SpringArm3D.collision_mask = 1"
+  },
+  {
+    "q": "how to make a character crouch in 3d",
+    "a": "if Input.is_action_pressed(\"crouch\"):\n    $CollisionShape3D.shape.height = crouch_height\n    $Camera3D.position.y = crouch_cam_y\nelse:\n    $CollisionShape3D.shape.height = stand_height\n    $Camera3D.position.y = stand_cam_y"
+  },
+  {
+    "q": "how to make a simple enemy fsm with idle patrol and chase",
+    "a": "enum State { IDLE, PATROL, CHASE }\nvar state = State.IDLE\nfunc _physics_process(delta):\n    match state:\n        State.IDLE:\n            if player_in_range(): state = State.CHASE\n            else: state_timer -= delta; if state_timer <= 0: state = State.PATROL\n        State.PATROL:\n            move_to_patrol_point(delta)\n            if player_in_range(): state = State.CHASE\n        State.CHASE:\n            move_toward_player(delta)\n            if not player_in_range(): state = State.IDLE"
+  },
+  {
+    "q": "how to make a guard enemy that returns to post after chasing",
+    "a": "var home_position: Vector2\nfunc _ready(): home_position = global_position\nfunc _physics_process(delta):\n    match state:\n        State.CHASE:\n            if not player_in_range():\n                state = State.RETURN\n        State.RETURN:\n            move_toward(home_position, delta)\n            if global_position.distance_to(home_position) < 5:\n                state = State.IDLE"
+  },
+  {
+    "q": "how to make an enemy flee when low on health",
+    "a": "func take_damage(amount: int) -> void:\n    health -= amount\n    if health < flee_threshold:\n        state = State.FLEE\nfunc _state_flee(delta) -> void:\n    var away = (global_position - player.global_position).normalized()\n    velocity = away * run_speed\n    move_and_slide()"
+  },
+  {
+    "q": "how to implement an attack cooldown for an enemy",
+    "a": "var attack_cooldown: float = 0.0\nfunc _state_attack(delta):\n    attack_cooldown -= delta\n    if attack_cooldown <= 0.0:\n        perform_attack()\n        attack_cooldown = attack_interval"
+  },
+  {
+    "q": "how to make an enemy that patrols between waypoints",
+    "a": "var waypoints: Array[Vector2] = []\nvar wp_index: int = 0\nfunc _move_patrol(delta):\n    if waypoints.is_empty(): return\n    var target = waypoints[wp_index]\n    velocity = (target - global_position).normalized() * speed\n    if global_position.distance_to(target) < 8.0:\n        wp_index = (wp_index + 1) % waypoints.size()\n    move_and_slide()"
+  },
+  {
+    "q": "how to make an enemy use line of sight detection",
+    "a": "func has_line_of_sight_to(target: Node2D) -> bool:\n    var space = get_world_2d().direct_space_state\n    var query = PhysicsRayQueryParameters2D.create(global_position, target.global_position, collision_mask)\n    var result = space.intersect_ray(query)\n    return result.is_empty() or result.collider == target"
+  },
+  {
+    "q": "how to make an enemy remember the last known player position",
+    "a": "var last_known_player_pos: Vector2 = Vector2.ZERO\nfunc update_perception():\n    if has_line_of_sight_to(player):\n        last_known_player_pos = player.global_position\n        state = State.CHASE\n    elif state == State.CHASE:\n        state = State.SEARCH"
+  },
+  {
+    "q": "how to make an enemy investigate a noise source",
+    "a": "func on_noise_heard(noise_position: Vector2) -> void:\n    if state == State.IDLE or state == State.PATROL:\n        investigation_target = noise_position\n        state = State.INVESTIGATE"
+  },
+  {
+    "q": "how to make a sleeping enemy wake up when the player gets close",
+    "a": "func _process(delta):\n    if state == State.SLEEP:\n        if global_position.distance_to(player.global_position) < wake_range:\n            state = State.IDLE\n            $AnimationPlayer.play(\"wake_up\")"
+  },
+  {
+    "q": "how to make an enemy that telegraphs its attack before striking",
+    "a": "func begin_attack() -> void:\n    state = State.TELEGRAPH\n    $AnimationPlayer.play(\"wind_up\")\n    await get_tree().create_timer(telegraph_duration).timeout\n    if state == State.TELEGRAPH:\n        execute_attack()"
+  },
+  {
+    "q": "how to implement seek steering behavior",
+    "a": "func seek(target_pos: Vector2) -> Vector2:\n    var desired = (target_pos - global_position).normalized() * max_speed\n    return desired - velocity"
+  },
+  {
+    "q": "how to implement flee steering behavior",
+    "a": "func flee(threat_pos: Vector2) -> Vector2:\n    var desired = (global_position - threat_pos).normalized() * max_speed\n    return desired - velocity"
+  },
+  {
+    "q": "how to implement arrive steering behavior with slowing radius",
+    "a": "func arrive(target_pos: Vector2) -> Vector2:\n    var to_target = target_pos - global_position\n    var dist = to_target.length()\n    var speed = max_speed if dist > slowing_radius else max_speed * (dist / slowing_radius)\n    var desired = to_target.normalized() * speed\n    return desired - velocity"
+  },
+  {
+    "q": "how to implement wander steering behavior",
+    "a": "var wander_angle: float = 0.0\nfunc wander() -> Vector2:\n    wander_angle += randf_range(-wander_jitter, wander_jitter)\n    var circle_center = velocity.normalized() * wander_radius\n    var displacement = Vector2.from_angle(wander_angle) * wander_distance\n    return seek(global_position + circle_center + displacement)"
+  },
+  {
+    "q": "how to implement pursuit of a moving target",
+    "a": "func pursue(target: Node2D) -> Vector2:\n    var look_ahead = target.velocity.length() / max_speed\n    var future_pos = target.global_position + target.velocity * look_ahead\n    return seek(future_pos)"
+  },
+  {
+    "q": "how to implement evade from a pursuing enemy",
+    "a": "func evade(pursuer: Node2D) -> Vector2:\n    var look_ahead = pursuer.velocity.length() / max_speed\n    var future_pos = pursuer.global_position + pursuer.velocity * look_ahead\n    return flee(future_pos)"
+  },
+  {
+    "q": "how to implement obstacle avoidance steering",
+    "a": "func avoid_obstacles() -> Vector2:\n    var ray = PhysicsRayQueryParameters2D.create(global_position,\n        global_position + velocity.normalized() * detection_range, obstacle_mask)\n    var result = get_world_2d().direct_space_state.intersect_ray(ray)\n    if result:\n        var avoid_dir = result.normal.rotated(PI / 2)\n        return avoid_dir * max_speed\n    return Vector2.ZERO"
+  },  {
+    "q": "how to combine multiple steering forces",
+    "a": "func compute_steering() -> Vector2:\n    var force = Vector2.ZERO\n    force += seek(target.global_position) * seek_weight\n    force += avoid_obstacles() * avoid_weight\n    force += separation(neighbors) * separation_weight\n    return force.limit_length(max_force)"
+  },
+  {
+    "q": "how to implement flocking separation behavior",
+    "a": "func separation(neighbors: Array) -> Vector2:\n    var steer = Vector2.ZERO\n    for n in neighbors:\n        var d = global_position.distance_to(n.global_position)\n        if d < separation_radius and d > 0:\n            steer += (global_position - n.global_position).normalized() / d\n    return steer"
+  },
+  {
+    "q": "how to implement flocking alignment behavior",
+    "a": "func alignment(neighbors: Array) -> Vector2:\n    var avg_vel = Vector2.ZERO\n    for n in neighbors: avg_vel += n.velocity\n    if neighbors.size() > 0: avg_vel /= neighbors.size()\n    return avg_vel - velocity"
+  },
+  {
+    "q": "how to implement flocking cohesion behavior",
+    "a": "func cohesion(neighbors: Array) -> Vector2:\n    var center = Vector2.ZERO\n    for n in neighbors: center += n.global_position\n    if neighbors.size() > 0: center /= neighbors.size()\n    return seek(center)"
+  },
+  {
+    "q": "how to implement a full boid flocking system",
+    "a": "func flock(neighbors: Array) -> Vector2:\n    return separation(neighbors) * 1.5 + alignment(neighbors) * 1.0 + cohesion(neighbors) * 1.0"
+  },
+  {
+    "q": "how to make an enemy pathfind to the player using navigation agent 2d",
+    "a": "@onready var nav: NavigationAgent2D = $NavigationAgent2D\nfunc _physics_process(delta):\n    nav.target_position = player.global_position\n    var next = nav.get_next_path_position()\n    velocity = (next - global_position).normalized() * speed\n    move_and_slide()"
+  },
+  {
+    "q": "how to make a navagent avoid dynamic obstacles",
+    "a": "$NavigationAgent2D.avoidance_enabled = true\n$NavigationAgent2D.radius = 20.0\n$NavigationAgent2D.neighbor_distance = 150.0"
+  },
+  {
+    "q": "how to request a navigation path manually",
+    "a": "var path = NavigationServer2D.map_get_path(\n    get_world_2d().navigation_map, start, end, true)"
+  },
+  {
+    "q": "how to draw a navigation path for debugging",
+    "a": "func _draw():\n    for i in range(path.size() - 1):\n        draw_line(to_local(path[i]), to_local(path[i+1]), Color.GREEN, 2)"
+  },
+  {
+    "q": "how to add a navigation obstacle at runtime",
+    "a": "var rid = NavigationServer2D.obstacle_create()\nNavigationServer2D.obstacle_set_map(rid, get_world_2d().navigation_map)\nNavigationServer2D.obstacle_set_position(rid, position)\nNavigationServer2D.obstacle_set_radius(rid, 50.0)"
+  },
+  {
+    "q": "how to implement simple grid a-star pathfinding",
+    "a": "var astar = AStar2D.new()\nfunc setup_grid(grid: Array) -> void:\n    for y in grid.size():\n        for x in grid[y].size():\n            if not grid[y][x]:  # walkable\n                var id = y * grid[0].size() + x\n                astar.add_point(id, Vector2(x, y))\nfunc connect_grid(w: int, h: int) -> void:\n    for y in h:\n        for x in w:\n            var id = y * w + x\n            if x + 1 < w: astar.connect_points(id, id + 1)\n            if y + 1 < h: astar.connect_points(id, id + w)"
+  },
+  {
+    "q": "how to get a path from astar2d",
+    "a": "var path = astar.get_point_path(start_id, end_id)"
+  },
+  {
+    "q": "how to update navigation region at runtime",
+    "a": "$NavigationRegion2D.bake_navigation_polygon()"
+  },
+  {
+    "q": "how to set navigation agent max speed",
+    "a": "$NavigationAgent2D.max_speed = 200.0"
+  },
+  {
+    "q": "how to check if a position is on the navigation mesh",
+    "a": "var closest = NavigationServer2D.map_get_closest_point(\n    get_world_2d().navigation_map, query_position)\nvar is_on_nav = closest.distance_to(query_position) < 5.0"
+  },
+  {
+    "q": "how to create a basic behavior tree node class",
+    "a": "class_name BTNode\nextends RefCounted\nenum Status { SUCCESS, FAILURE, RUNNING }\nfunc tick(agent: Node, delta: float) -> Status:\n    return Status.FAILURE"
+  },
+  {
+    "q": "how to create a behavior tree sequence node",
+    "a": "class_name BTSequence\nextends BTNode\nvar children: Array[BTNode] = []\nfunc tick(agent, delta):\n    for child in children:\n        var s = child.tick(agent, delta)\n        if s != Status.SUCCESS: return s\n    return Status.SUCCESS"
+  },
+  {
+    "q": "how to create a behavior tree selector node",
+    "a": "class_name BTSelector\nextends BTNode\nvar children: Array[BTNode] = []\nfunc tick(agent, delta):\n    for child in children:\n        var s = child.tick(agent, delta)\n        if s != Status.FAILURE: return s\n    return Status.FAILURE"
+  },
+  {
+    "q": "how to create a behavior tree inverter decorator",
+    "a": "class_name BTInverter\nextends BTNode\nvar child: BTNode\nfunc tick(agent, delta):\n    var s = child.tick(agent, delta)\n    if s == Status.SUCCESS: return Status.FAILURE\n    if s == Status.FAILURE: return Status.SUCCESS\n    return s"
+  },
+  {
+    "q": "how to create a behavior tree repeater decorator",
+    "a": "class_name BTRepeater\nextends BTNode\nvar child: BTNode\nvar times: int = -1  # -1 = infinite\nvar count: int = 0\nfunc tick(agent, delta):\n    if times != -1 and count >= times: return Status.SUCCESS\n    child.tick(agent, delta)\n    count += 1\n    return Status.RUNNING"
+  },
+  {
+    "q": "how to create a behavior tree repeater decorator",
+    "a": "class_name BTRepeater\nextends BTNode\nvar child: BTNode\nvar times: int = -1  # -1 = infinite\nvar count: int = 0\nfunc tick(agent, delta):\n    if times != -1 and count >= times: return Status.SUCCESS\n    child.tick(agent, delta)\n    count += 1\n    return Status.RUNNING"
+  },
+  {
+    "q": "how to create a behavior tree action leaf node",
+    "a": "class_name BTMoveToTarget\nextends BTNode\nfunc tick(agent, delta):\n    if not agent.has_target(): return Status.FAILURE\n    agent.move_toward_target(delta)\n    if agent.reached_target(): return Status.SUCCESS\n    return Status.RUNNING"
+  },
+  {
+    "q": "how to create a behavior tree condition leaf node",
+    "a": "class_name BTPlayerInRange\nextends BTNode\n@export var range: float = 200.0\nfunc tick(agent, delta):\n    if agent.player_distance() <= range:\n        return Status.SUCCESS\n    return Status.FAILURE"
+  },
+  {
+    "q": "how to run a behavior tree each frame",
+    "a": "@onready var bt: BTNode = build_tree()\nfunc _physics_process(delta):\n    bt.tick(self, delta)"
+  },
+  {
+    "q": "how to create a behavior tree cooldown decorator",
+    "a": "class_name BTCooldown\nextends BTNode\n@export var cooldown: float = 2.0\nvar _timer: float = 0.0\nfunc tick(agent, delta):\n    _timer -= delta\n    if _timer > 0.0: return Status.FAILURE\n    var s = child.tick(agent, delta)\n    if s == Status.SUCCESS: _timer = cooldown\n    return s"
+  },
+  {
+    "q": "how to use a blackboard for behavior tree shared data",
+    "a": "# Blackboard is a Dictionary passed to all nodes\nvar blackboard: Dictionary = {}\nfunc _physics_process(delta):\n    blackboard[\"player_pos\"] = player.global_position\n    bt.tick(self, delta, blackboard)"
+  },
+  {
+    "q": "how to implement a basic utility ai action scorer",
+    "a": "class_name UtilityAction\nextends RefCounted\nvar name: String\nfunc score(agent: Node) -> float:\n    return 0.0\nfunc execute(agent: Node, delta: float) -> void:\n    pass"
+  },
+  {
+    "q": "how to run utility ai to pick the best action",
+    "a": "func choose_action() -> UtilityAction:\n    var best: UtilityAction = null\n    var best_score: float = -INF\n    for action in actions:\n        var s = action.score(self)\n        if s > best_score:\n            best_score = s\n            best = action\n    return best"
+  },
+  {
+    "q": "how to score a utility action based on distance to player",
+    "a": "func score(agent) -> float:\n    var dist = agent.global_position.distance_to(agent.player.global_position)\n    return 1.0 - clamp(dist / 500.0, 0.0, 1.0)"
+  },
+  {
+    "q": "how to score a utility action based on health",
+    "a": "func score(agent) -> float:\n    return 1.0 - (agent.health / agent.max_health)  # higher when low health"
+  },
+  {
+    "q": "how to blend utility scores with weights",
+    "a": "func score(agent) -> float:\n    var proximity = score_proximity(agent)\n    var health_urgency = score_health(agent)\n    return proximity * 0.4 + health_urgency * 0.6"
+  },
+  {
+    "q": "how to define a goap world state",
+    "a": "var world_state: Dictionary = {\n    \"has_weapon\": false,\n    \"enemy_alive\": true,\n    \"player_in_range\": false\n}"
+  },
+  {
+    "q": "how to define a goap action",
+    "a": "class_name GOAPAction\nextends RefCounted\nvar preconditions: Dictionary = {}\nvar effects: Dictionary = {}\nvar cost: float = 1.0\nfunc execute(agent: Node) -> bool:\n    return true"
+  },
+  {
+    "q": "how to check if goap action preconditions are met",
+    "a": "func can_run(world_state: Dictionary) -> bool:\n    for key in preconditions:\n        if world_state.get(key) != preconditions[key]:\n            return false\n    return true"
+  },
+  {
+    "q": "how to apply goap action effects to world state",
+    "a": "func apply_effects(state: Dictionary) -> Dictionary:\n    var new_state = state.duplicate()\n    for key in effects:\n        new_state[key] = effects[key]\n    return new_state"
+  },
+  {
+    "q": "how to make a camera shake effect",
+    "a": "var shake_strength: float = 0.0\nfunc shake(strength: float) -> void:\n    shake_strength = strength\nfunc _process(delta):\n    if shake_strength > 0:\n        offset = Vector2(randf_range(-1,1), randf_range(-1,1)) * shake_strength\n        shake_strength = lerp(shake_strength, 0.0, 10.0 * delta)\n    else:\n        offset = Vector2.ZERO"
+  },
+  {
+    "q": "how to make a camera with smooth follow in 2d",
+    "a": "@export var target: Node2D\n@export var smooth_speed: float = 5.0\nfunc _process(delta):\n    if target:\n        global_position = global_position.lerp(target.global_position, smooth_speed * delta)"
+  },
+  {
+    "q": "how to add camera deadzone follow",
+    "a": "var deadzone: Rect2 = Rect2(-50, -50, 100, 100)\nfunc _process(delta):\n    var offset = target.global_position - global_position\n    if not deadzone.has_point(offset):\n        global_position += offset * follow_speed * delta"
+  },
+  {
+    "q": "how to zoom camera2d in and out on scroll",
+    "a": "func _input(event):\n    if event is InputEventMouseButton:\n        if event.button_index == MOUSE_BUTTON_WHEEL_UP:\n            zoom *= 1.1\n        elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:\n            zoom *= 0.9\n        zoom = zoom.clamp(Vector2(0.5,0.5), Vector2(3.0,3.0))"
+  },
+  {
+    "q": "how to make a camera room transition effect",
+    "a": "func transition_to(new_pos: Vector2) -> void:\n    var tween = create_tween()\n    tween.tween_property(self, \"global_position\", new_pos, 0.5).set_ease(Tween.EASE_IN_OUT)"
+  },
+  {
+    "q": "how to clamp camera inside level bounds",
+    "a": "func _process(delta):\n    global_position.x = clamp(global_position.x, bounds.position.x, bounds.end.x)\n    global_position.y = clamp(global_position.y, bounds.position.y, bounds.end.y)"
+  },
+  {
+    "q": "how to get camera frustum planes for visibility culling",
+    "a": "var planes = $Camera3D.get_frustum()\nfor plane in planes:\n    if not plane.is_point_over(mesh.global_position):\n        mesh.visible = false"
+  },
+  {
+    "q": "how to project a 3d world position to 2d screen space",
+    "a": "var screen_pos = $Camera3D.unproject_position(world_pos)"
+  },
+  {
+    "q": "how to unproject a 2d screen position to a 3d ray",
+    "a": "var ray_origin = $Camera3D.project_ray_origin(screen_pos)\nvar ray_dir = $Camera3D.project_ray_normal(screen_pos)"
+  },
+  {
+    "q": "how to make a cinema camera look at a target smoothly",
+    "a": "func _process(delta):\n    var dir = (target.global_position - global_position).normalized()\n    var target_basis = Basis.looking_at(dir, Vector3.UP)\n    transform.basis = transform.basis.slerp(target_basis, 5.0 * delta)"
+  },
+  {
+    "q": "how to tween a property with godot 4 tween",
+    "a": "var tween = create_tween()\ntween.tween_property(self, \"position\", Vector2(100, 200), 1.0)"
+  },
+  {
+    "q": "how to chain multiple tweens in sequence",
+    "a": "var tween = create_tween()\ntween.tween_property(self, \"position\", end, 1.0)\ntween.tween_property(self, \"scale\", Vector2.ZERO, 0.5)"
+  },
+  {
+    "q": "how to tween in parallel",
+    "a": "var tween = create_tween().set_parallel(true)\ntween.tween_property(self, \"position\", target, 1.0)\ntween.tween_property(self, \"modulate:a\", 0.0, 1.0)"
+  },
+  {
+    "q": "how to set easing on a tween",
+    "a": "tween.tween_property(self, \"position\", end, 1.0).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)"
+  },
+  {
+    "q": "how to call a function after a tween finishes",
+    "a": "tween.tween_callback(on_tween_done)"
+  },
+  {
+    "q": "how to delay a tween step",
+    "a": "tween.tween_interval(0.5)\ntween.tween_property(self, \"modulate:a\", 1.0, 0.3)"
+  },
+  {
+    "q": "how to kill an active tween",
+    "a": "if tween and tween.is_running():\n    tween.kill()"
+  },
+  {
+    "q": "how to tween a custom method",
+    "a": "tween.tween_method(set_shader_param, 0.0, 1.0, 1.0)"
+  },
+  {
+    "q": "how to play an animation and wait for it to finish",
+    "a": "$AnimationPlayer.play(\"attack\")\nawait $AnimationPlayer.animation_finished"
+  },
+  {
+    "q": "how to blend between two animations in animationtree",
+    "a": "$AnimationTree.set(\"parameters/blend/blend_amount\", 0.5)"
+  },
+  {
+    "q": "how to set animationtree conditions for state transitions",
+    "a": "$AnimationTree.set(\"parameters/conditions/is_running\", true)"
+  },
+  {
+    "q": "how to play a one shot animation on animationtree",
+    "a": "$AnimationTree.set(\"parameters/OneShot/request\", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)"
+  },
+  {
+    "q": "how to get the current animation playing in animationplayer",
+    "a": "var current = $AnimationPlayer.current_animation"
+  },
+  {
+    "q": "how to set animation playback speed",
+    "a": "$AnimationPlayer.speed_scale = 2.0"
+  },
+  {
+    "q": "how to play animation in reverse",
+    "a": "$AnimationPlayer.play_backwards(\"run\")"
+  },
+  {
+    "q": "how to seek to a specific frame in an animation",
+    "a": "$AnimationPlayer.seek(0.5, true)"
+  },
+  {
+    "q": "how to add a track to an animation via code",
+    "a": "var anim = $AnimationPlayer.get_animation(\"my_anim\")\nvar track = anim.add_track(Animation.TYPE_VALUE)\nanim.track_set_path(track, \"Sprite2D:position\")\nanim.track_insert_key(track, 0.0, Vector2.ZERO)\nanim.track_insert_key(track, 1.0, Vector2(100, 0))"
+  },
+  {
+    "q": "how to change a label text from code",
+    "a": "$Label.text = \"Score: %d\" % score"
+  },
+  {
+    "q": "how to update a progress bar value",
+    "a": "$ProgressBar.value = health\n$ProgressBar.max_value = max_health"
+  },
+  {
+    "q": "how to make a button trigger a function",
+    "a": "$Button.pressed.connect(_on_button_pressed)\nfunc _on_button_pressed(): print(\"clicked\")"
+  },
+  {
+    "q": "how to make a draggable ui panel",
+    "a": "var dragging = false\nvar drag_offset = Vector2.ZERO\nfunc _gui_input(event):\n    if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:\n        dragging = event.pressed\n        drag_offset = position - get_global_mouse_position()\n    elif event is InputEventMouseMotion and dragging:\n        position = get_global_mouse_position() + drag_offset"
+  },
+  {
+    "q": "how to show and hide a ui element with a tween",
+    "a": "func show_ui(panel: Control) -> void:\n    panel.visible = true\n    var tween = create_tween()\n    tween.tween_property(panel, \"modulate:a\", 1.0, 0.3)\nfunc hide_ui(panel: Control) -> void:\n    var tween = create_tween()\n    tween.tween_property(panel, \"modulate:a\", 0.0, 0.3)\n    await tween.finished\n    panel.visible = false"
+  },
+  {
+    "q": "how to use a lineedit to get player text input",
+    "a": "$LineEdit.text_submitted.connect(_on_text_submitted)\nfunc _on_text_submitted(text: String):\n    player_name = text"
+  },
+  {
+    "q": "how to add items to an option button",
+    "a": "$OptionButton.add_item(\"Easy\")\n$OptionButton.add_item(\"Normal\")\n$OptionButton.add_item(\"Hard\")"
+  },
+  {
+    "q": "how to get selected item from an option button",
+    "a": "var selected = $OptionButton.get_selected_id()\nvar text = $OptionButton.get_item_text($OptionButton.selected)"
+  },
+  {
+    "q": "how to add items to an item list",
+    "a": "$ItemList.add_item(\"Sword\")\n$ItemList.add_item(\"Shield\")"
+  },
+  {
+    "q": "how to get the selected item from an item list",
+    "a": "var idx = $ItemList.get_selected_items()[0]\nvar item_text = $ItemList.get_item_text(idx)"
+  },
+  {
+    "q": "how to get the selected item from an item list",
+    "a": "var idx = $ItemList.get_selected_items()[0]\nvar item_text = $ItemList.get_item_text(idx)"
+  },
+  {
+    "q": "how to use a scrollcontainer with a vboxcontainer",
+    "a": "# Add ScrollContainer > VBoxContainer in scene\n# Then add items to VBoxContainer:\nvar label = Label.new()\nlabel.text = \"Item\"\n$ScrollContainer/VBoxContainer.add_child(label)"
+  },
+  {
+    "q": "how to scroll to the bottom of a scroll container",
+    "a": "await get_tree().process_frame\n$ScrollContainer.scroll_vertical = $ScrollContainer.get_v_scroll_bar().max_value"
+  },
+  {
+    "q": "how to use rich text label for colored text",
+    "a": "$RichTextLabel.bbcode_enabled = true\n$RichTextLabel.text = \"[color=red]Damage![/color] -[b]50[/b] HP\""
+  },
+  {
+    "q": "how to append text to a rich text label",
+    "a": "$RichTextLabel.append_text(\"[color=yellow]+100 XP[/color]\\n\")"
+  },
+  {
+    "q": "how to use a nine patch rect for scalable ui",
+    "a": "# NinePatchRect stretches corners separately from edges\n$NinePatchRect.texture = preload(\"res://ui/panel.png\")\n$NinePatchRect.patch_margin_left = 8\n$NinePatchRect.patch_margin_right = 8\n$NinePatchRect.patch_margin_top = 8\n$NinePatchRect.patch_margin_bottom = 8"
+  },
+  {
+    "q": "how to set a theme font size at runtime",
+    "a": "$Label.add_theme_font_size_override(\"font_size\", 24)"
+  },
+  {
+    "q": "how to set label font color at runtime",
+    "a": "$Label.add_theme_color_override(\"font_color\", Color.RED)"
+  },
+  {
+    "q": "how to make a world space health bar that follows a character",
+    "a": "func _process(delta):\n    var screen_pos = get_viewport().get_camera_2d().get_screen_center_position()\n    $HealthBarUI.global_position = global_position + Vector2(0, -50)"
+  },
+  {
+    "q": "how to make an animated number counter on a label",
+    "a": "var display_value: float = 0.0\nfunc set_value(target: float) -> void:\n    var tween = create_tween()\n    tween.tween_method(func(v): $Label.text = str(int(v)), display_value, target, 0.5)"
+  },
+  {
+    "q": "how to use gridcontainer to lay out items in a grid",
+    "a": "$GridContainer.columns = 4\nfor item in inventory:\n    var slot = slot_scene.instantiate()\n    $GridContainer.add_child(slot)"
+  },
+  {
+    "q": "how to focus a control node for keyboard navigation",
+    "a": "$Button.grab_focus()"
+  },
+  {
+    "q": "how to cycle focus between controls with tab",
+    "a": "$Button1.focus_next = $Button1.get_path_to($Button2)\n$Button2.focus_next = $Button2.get_path_to($Button3)"
+  },
+  {
+    "q": "how to make a popup menu appear at mouse position",
+    "a": "$PopupMenu.popup(Rect2i(get_global_mouse_position(), Vector2i.ZERO))"
+  },
+  {
+    "q": "how to connect popup menu item selected signal",
+    "a": "$PopupMenu.id_pressed.connect(_on_popup_item)\nfunc _on_popup_item(id: int): print(\"selected: \", id)"
+  },
+  {
+    "q": "how to add a separator to a popup menu",
+    "a": "$PopupMenu.add_separator()\n$PopupMenu.add_item(\"Delete\")"
+  },
+  {
+    "q": "how to create a custom tooltip",
+    "a": "func _make_custom_tooltip(for_text):\n    var tip = preload(\"res://ui/tooltip.tscn\").instantiate()\n    tip.get_node(\"Label\").text = for_text\n    return tip"
+  },
+  {
+    "q": "how to save game data to a file",
+    "a": "var data = {\"level\": 3, \"hp\": 80, \"pos\": {\"x\": 100, \"y\": 200}}\nvar file = FileAccess.open(\"user://save.json\", FileAccess.WRITE)\nfile.store_string(JSON.stringify(data))\nfile.close()"
+  },
+  {
+    "q": "how to load game data from a file",
+    "a": "if not FileAccess.file_exists(\"user://save.json\"): return\nvar file = FileAccess.open(\"user://save.json\", FileAccess.READ)\nvar data = JSON.parse_string(file.get_as_text())\nfile.close()\nreturn data"
+  },
+  {
+    "q": "how to check if a save file exists",
+    "a": "if FileAccess.file_exists(\"user://save.json\"):\n    load_game()"
+  },
+  {
+    "q": "how to delete a save file",
+    "a": "if FileAccess.file_exists(\"user://save.json\"):\n    DirAccess.remove_absolute(\"user://save.json\")"
+  },
+  {
+    "q": "how to save data using resource",
+    "a": "var save_data = MySaveResource.new()\nsave_data.score = 500\nResourceSaver.save(save_data, \"user://save.tres\")"
+  },
+  {
+    "q": "how to load a saved resource",
+    "a": "var save_data = ResourceLoader.load(\"user://save.tres\") as MySaveResource"
+  },
+  {
+    "q": "how to save settings with configfile",
+    "a": "var cfg = ConfigFile.new()\ncfg.set_value(\"audio\", \"volume\", 0.8)\ncfg.set_value(\"video\", \"fullscreen\", true)\ncfg.save(\"user://settings.cfg\")"
+  },
+  {
+    "q": "how to load settings with configfile",
+    "a": "var cfg = ConfigFile.new()\nif cfg.load(\"user://settings.cfg\") == OK:\n    var vol = cfg.get_value(\"audio\", \"volume\", 1.0)"
+  },
+  {
+    "q": "how to store a vector2 in a save file",
+    "a": "data[\"position\"] = {\"x\": pos.x, \"y\": pos.y}\n# Load:\nvar pos = Vector2(data[\"position\"][\"x\"], data[\"position\"][\"y\"])"
+  },
+  {
+    "q": "how to autosave every 5 minutes",
+    "a": "var autosave_timer = Timer.new()\nautosave_timer.wait_time = 300.0\nautosave_timer.autostart = true\nautosave_timer.timeout.connect(save_game)\nadd_child(autosave_timer)"
+  },
+  {
+    "q": "how to play a random sound from an array",
+    "a": "var sounds: Array[AudioStream] = [sound1, sound2, sound3]\nfunc play_random_sound() -> void:\n    $AudioStreamPlayer.stream = sounds[randi() % sounds.size()]\n    $AudioStreamPlayer.play()"
+  },
+  {
+    "q": "how to fade out audio with a tween",
+    "a": "var tween = create_tween()\ntween.tween_property($AudioStreamPlayer, \"volume_db\", -80.0, 2.0)\nawait tween.finished\n$AudioStreamPlayer.stop()"
+  },
+  {
+    "q": "how to crossfade between two music tracks",
+    "a": "func crossfade(new_stream: AudioStream) -> void:\n    var tween = create_tween().set_parallel(true)\n    tween.tween_property($MusicA, \"volume_db\", -80.0, 1.0)\n    $MusicB.stream = new_stream\n    $MusicB.play()\n    tween.tween_property($MusicB, \"volume_db\", 0.0, 1.0)"
+  },
+  {
+    "q": "how to set audio bus volume from code",
+    "a": "var bus_idx = AudioServer.get_bus_index(\"Master\")\nAudioServer.set_bus_volume_db(bus_idx, linear_to_db(0.5))"
+  },
+  {
+    "q": "how to make a 2d positional audio player",
+    "a": "# Use AudioStreamPlayer2D - it has attenuation_distance etc.\n$AudioStreamPlayer2D.max_distance = 500.0\n$AudioStreamPlayer2D.attenuation = 1.0\n$AudioStreamPlayer2D.play()"
+  },
+  {
+    "q": "how to pitch shift a sound based on speed",
+    "a": "$AudioStreamPlayer.pitch_scale = remap(speed, 0, max_speed, 0.8, 1.4)"
+  },
+  {
+    "q": "how to add reverb to an audio bus",
+    "a": "var reverb = AudioEffectReverb.new()\nreverb.room_size = 0.8\nreverb.wet = 0.3\nAudioServer.add_bus_effect(AudioServer.get_bus_index(\"SFX\"), reverb)"
+  },
+  {
+    "q": "how to play a footstep sound only when moving",
+    "a": "if velocity.length() > 10 and is_on_floor():\n    if not $StepPlayer.playing:\n        $StepPlayer.play()"
+  },
+  {
+    "q": "how to sync music to game events with beat timing",
+    "a": "var bpm: float = 120.0\nvar beat_duration: float = 60.0 / bpm\nvar next_beat: float = 0.0\nfunc _process(delta):\n    next_beat -= delta\n    if next_beat <= 0.0:\n        next_beat = beat_duration\n        emit_signal(\"on_beat\")"
+  },
+  {
+    "q": "how to spawn a particle effect at a position",
+    "a": "var effect = preload(\"res://effects/explosion.tscn\").instantiate()\neffect.global_position = hit_position\nget_tree().root.add_child(effect)"
+  },
+  {
+    "q": "how to make a particle effect auto-destroy when done",
+    "a": "# In the particle scene script:\nfunc _ready():\n    $GPUParticles2D.emitting = true\n    await get_tree().create_timer($GPUParticles2D.lifetime).timeout\n    queue_free()"
+  },
+  {
+    "q": "how to change particle color from code",
+    "a": "var mat = $GPUParticles2D.process_material as ParticleProcessMaterial\nmat.color = Color.RED"
+  },
+  {
+    "q": "how to emit a burst of particles once",
+    "a": "$GPUParticles2D.one_shot = true\n$GPUParticles2D.emitting = true"
+  },
+  {
+    "q": "how to spawn hit sparks using cpu particles 2d",
+    "a": "func spawn_hit_effect(pos: Vector2, normal: Vector2) -> void:\n    var sparks = preload(\"res://vfx/sparks.tscn\").instantiate()\n    sparks.global_position = pos\n    sparks.rotation = normal.angle()\n    sparks.emitting = true\n    add_child(sparks)"
+  },
+  {
+    "q": "how to scale particle amount based on a value",
+    "a": "$GPUParticles2D.amount = int(intensity * 100)"
+  },
+  {
+    "q": "how to trail particles behind a moving object",
+    "a": "# Enable trail in GPUParticles2D:\n$GPUParticles2D.trail_enabled = true\n$GPUParticles2D.trail_lifetime = 0.3"
+  },
+  {
+    "q": "how to change emission shape of particles at runtime",
+    "a": "var mat = $GPUParticles2D.process_material as ParticleProcessMaterial\nmat.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_SPHERE\nmat.emission_sphere_radius = 20.0"
+  },
+  {
+    "q": "how to use a node2d as a gpu particle attractor",
+    "a": "# Add GPUParticlesAttractor3D in 3D scene\n# or use a custom shader for 2D attraction\n$GPUParticles3D.sub_emitter = $GPUParticles3D.get_path_to($SubEmitter)"
+  },
+  {
+    "q": "how to generate random terrain heights using noise",
+    "a": "var noise = FastNoiseLite.new()\nnoise.seed = randi()\nnoise.frequency = 0.05\nfor x in range(width):\n    var h = int((noise.get_noise_1d(x) + 1) * 0.5 * max_height)"
+  },
+  {
+    "q": "how to generate a random dungeon with rooms",
+    "a": "var rooms: Array[Rect2i] = []\nfor i in range(max_rooms):\n    var w = randi_range(min_size, max_size)\n    var h = randi_range(min_size, max_size)\n    var x = randi_range(0, map_w - w)\n    var y = randi_range(0, map_h - h)\n    var room = Rect2i(x, y, w, h)\n    if not rooms.any(func(r): return r.intersects(room)):\n        rooms.append(room)"
+  },
+  {
+    "q": "how to connect dungeon rooms with corridors",
+    "a": "func connect_rooms(a: Rect2i, b: Rect2i) -> void:\n    var start = a.get_center()\n    var end = b.get_center()\n    for x in range(min(start.x, end.x), max(start.x, end.x) + 1):\n        tilemap.set_cell(0, Vector2i(x, start.y), 0, Vector2i(1,1))\n    for y in range(min(start.y, end.y), max(start.y, end.y) + 1):\n        tilemap.set_cell(0, Vector2i(end.x, y), 0, Vector2i(1,1))"
+  },
+  {
+    "q": "how to place enemies randomly avoiding walls",
+    "a": "func get_random_floor_tile() -> Vector2i:\n    var floor_tiles = tilemap.get_used_cells_by_id(0, 0, Vector2i(1,1))\n    return floor_tiles[randi() % floor_tiles.size()]"
+  },
+  {
+    "q": "how to generate a random name from syllables",
+    "a": "var syllables = [\"ra\", \"tor\", \"vel\", \"az\", \"kir\", \"dun\", \"mex\"]\nfunc random_name(length: int) -> String:\n    var name = \"\"\n    for i in range(length):\n        name += syllables[randi() % syllables.size()]\n    return name.capitalize()"
+  },
+  {
+    "q": "how to use fastnoiselite to generate 2d terrain",
+    "a": "var noise = FastNoiseLite.new()\nnoise.noise_type = FastNoiseLite.TYPE_PERLIN\nnoise.frequency = 0.03\nvar val = noise.get_noise_2d(x, y)"
+  },
+  {
+    "q": "how to seed a random number generator for reproducibility",
+    "a": "var rng = RandomNumberGenerator.new()\nrng.seed = hash(\"my_seed_string\")\nvar val = rng.randi_range(0, 100)"
+  },
+  {
+    "q": "how to pick a weighted random item",
+    "a": "func weighted_pick(items: Array, weights: Array) -> Variant:\n    var total = weights.reduce(func(a, b): return a + b, 0.0)\n    var r = randf() * total\n    for i in items.size():\n        r -= weights[i]\n        if r <= 0: return items[i]\n    return items[-1]"
+  },
+  {
+    "q": "how to generate a maze using recursive backtracking",
+    "a": "func carve(x: int, y: int) -> void:\n    visited[y][x] = true\n    var dirs = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]\n    dirs.shuffle()\n    for d in dirs:\n        var nx = x + d.x * 2\n        var ny = y + d.y * 2\n        if nx >= 0 and ny >= 0 and nx < w and ny < h and not visited[ny][nx]:\n            maze[y + d.y][x + d.x] = 0  # remove wall\n            carve(nx, ny)"
+  },
+  {
+    "q": "how to create a basic object pool for bullets",
+    "a": "class_name BulletPool\nextends Node\nvar pool: Array = []\nvar bullet_scene = preload(\"res://bullet.tscn\")\nfunc get_bullet() -> Node:\n    for b in pool:\n        if not b.active:\n            b.reset()\n            return b\n    var b = bullet_scene.instantiate()\n    pool.append(b)\n    add_child(b)\n    return b"
+  },
+  {
+    "q": "how to return a bullet to the object pool",
+    "a": "func deactivate() -> void:\n    active = false\n    visible = false\n    set_physics_process(false)"
+  },
+  {
+    "q": "how to pre-warm an object pool at game start",
+    "a": "func _ready() -> void:\n    for i in range(pool_size):\n        var obj = scene.instantiate()\n        obj.visible = false\n        add_child(obj)\n        pool.append(obj)"
+  },
+  {
+    "q": "how to expand an object pool when it runs out",
+    "a": "func get_object() -> Node:\n    for obj in pool:\n        if not obj.is_active: return obj.activate()\n    # Pool exhausted - grow it\n    var obj = scene.instantiate()\n    add_child(obj)\n    pool.append(obj)\n    return obj.activate()"
+  },
+  {
+    "q": "how to make a basic inventory system with a dictionary",
+    "a": "var inventory: Dictionary = {}\nfunc add_item(item_name: String, amount: int = 1) -> void:\n    inventory[item_name] = inventory.get(item_name, 0) + amount\nfunc remove_item(item_name: String, amount: int = 1) -> bool:\n    if inventory.get(item_name, 0) < amount: return false\n    inventory[item_name] -= amount\n    if inventory[item_name] == 0: inventory.erase(item_name)\n    return true"
+  },
+  {
+    "q": "how to make an inventory with item resources",
+    "a": "class_name ItemResource\nextends Resource\n@export var item_name: String\n@export var icon: Texture2D\n@export var max_stack: int = 99\n@export var description: String"
+  },
+  {
+    "q": "how to implement a hotbar that selects inventory slots",
+    "a": "var selected_slot: int = 0\nfunc _input(event):\n    if event is InputEventKey and event.pressed:\n        if event.keycode >= KEY_1 and event.keycode <= KEY_9:\n            selected_slot = event.keycode - KEY_1"
+  },
+  {
+    "q": "how to implement item pickup with area2d overlap",
+    "a": "func _on_body_entered(body):\n    if body.is_in_group(\"player\"):\n        body.inventory.add_item(item_data)\n        queue_free()"
+  },
+  {
+    "q": "how to implement item use",
+    "a": "func use_item(item_name: String) -> void:\n    match item_name:\n        \"health_potion\":\n            health = min(health + 50, max_health)\n            inventory.remove_item(item_name)\n        \"speed_boost\":\n            speed *= 2.0\n            await get_tree().create_timer(10.0).timeout\n            speed /= 2.0\n            inventory.remove_item(item_name)"
+  },
+  {
+    "q": "how to implement a hit detection system with area2d",
+    "a": "@onready var hitbox: Area2D = $Hitbox\nfunc _ready():\n    hitbox.body_entered.connect(_on_hit)\nfunc _on_hit(body):\n    if body.has_method(\"take_damage\"):\n        body.take_damage(attack_damage)"
+  },
+  {
+    "q": "how to implement damage numbers popup",
+    "a": "func spawn_damage_number(amount: int, pos: Vector2) -> void:\n    var label = Label.new()\n    label.text = str(amount)\n    label.global_position = pos\n    get_tree().root.add_child(label)\n    var tween = label.create_tween()\n    tween.tween_property(label, \"position:y\", pos.y - 50, 0.8)\n    tween.parallel().tween_property(label, \"modulate:a\", 0.0, 0.8)\n    await tween.finished\n    label.queue_free()"
+  },
+  {
+    "q": "how to implement a combo attack system",
+    "a": "var combo_count: int = 0\nvar combo_timer: float = 0.0\nconst COMBO_WINDOW: float = 0.8\nfunc _process(delta):\n    if combo_timer > 0:\n        combo_timer -= delta\n    else:\n        combo_count = 0\nfunc attack() -> void:\n    combo_count = (combo_count + 1) % 3\n    combo_timer = COMBO_WINDOW\n    match combo_count:\n        0: light_attack()\n        1: heavy_attack()\n        2: finisher()"
+  },
+  {
+    "q": "how to implement a shield that blocks damage from the front",
+    "a": "func take_damage(amount: int, direction: Vector2) -> void:\n    var dot = direction.dot(transform.x)\n    if is_blocking and dot < 0:\n        amount = int(amount * (1.0 - block_reduction))\n    health -= amount"
+  },
+  {
+    "q": "how to implement critical hit chance",
+    "a": "func calculate_damage(base: int) -> int:\n    if randf() < crit_chance:\n        emit_signal(\"critical_hit\")\n        return int(base * crit_multiplier)\n    return base"
+  },
+  {
+    "q": "how to implement a status effect system",
+    "a": "var active_effects: Dictionary = {}\nfunc apply_effect(effect_name: String, duration: float) -> void:\n    active_effects[effect_name] = duration\nfunc _process(delta):\n    for effect in active_effects.keys():\n        active_effects[effect] -= delta\n        if active_effects[effect] <= 0:\n            active_effects.erase(effect)\n            emit_signal(\"effect_expired\", effect)"
+  },
+  {
+    "q": "how to implement poison damage over time",
+    "a": "var poison_stacks: int = 0\nfunc _physics_process(delta):\n    if poison_stacks > 0:\n        poison_timer -= delta\n        if poison_timer <= 0:\n            take_damage(poison_damage * poison_stacks)\n            poison_timer = poison_tick_rate"
+  },
+  {
+    "q": "how to implement a targeting system that locks onto nearest enemy",
+    "a": "func get_nearest_enemy() -> Node2D:\n    var enemies = get_tree().get_nodes_in_group(\"enemies\")\n    var nearest: Node2D = null\n    var min_dist = INF\n    for e in enemies:\n        var d = global_position.distance_squared_to(e.global_position)\n        if d < min_dist:\n            min_dist = d\n            nearest = e\n    return nearest"
+  },
+  {
+    "q": "how to implement a parry system with timing window",
+    "a": "var parry_window: float = 0.2\nvar can_parry: bool = false\nfunc start_parry() -> void:\n    can_parry = true\n    await get_tree().create_timer(parry_window).timeout\n    can_parry = false\nfunc take_damage(amount: int, attacker: Node) -> void:\n    if can_parry:\n        emit_signal(\"parry_success\", attacker)\n        return\n    health -= amount"
+  },
+  {
+    "q": "how to make a melee hitbox that only activates during swing",
+    "a": "func _on_attack_anim_frame(frame: int) -> void:\n    if frame == attack_start_frame:\n        $Hitbox/CollisionShape2D.disabled = false\n    elif frame == attack_end_frame:\n        $Hitbox/CollisionShape2D.disabled = true"
+  },
+  {
+    "q": "how to set a tile in a tilemaplayer using atlas coords",
+    "a": "$TileMapLayer.set_cell(Vector2i(5, 3), 0, Vector2i(2, 1))"
+  },
+  {
+    "q": "how to check the tile type at a world position",
+    "a": "var map_pos = $TileMapLayer.local_to_map($TileMapLayer.to_local(world_pos))\nvar cell_data = $TileMapLayer.get_cell_tile_data(map_pos)"
+  },
+  {
+    "q": "how to get custom data from a tile",
+    "a": "var td = $TileMapLayer.get_cell_tile_data(cell)\nif td:\n    var damage = td.get_custom_data(\"damage\")"
+  },
+  {
+    "q": "how to convert world position to tilemap cell",
+    "a": "var cell = $TileMapLayer.local_to_map(to_local(world_position))"
+  },
+  {
+    "q": "how to convert tilemap cell to world position",
+    "a": "var world_pos = to_global($TileMapLayer.map_to_local(cell))"
+  },
+  {
+    "q": "how to get all tiles with a specific custom data value",
+    "a": "var hazard_tiles = []\nfor cell in $TileMapLayer.get_used_cells():\n    var td = $TileMapLayer.get_cell_tile_data(cell)\n    if td and td.get_custom_data(\"is_hazard\"):\n        hazard_tiles.append(cell)"
+  },
+  {
+    "q": "how to paint tiles in a rect on a tilemaplayer",
+    "a": "for x in range(rect.position.x, rect.end.x):\n    for y in range(rect.position.y, rect.end.y):\n        $TileMapLayer.set_cell(Vector2i(x, y), source_id, atlas_coord)"
+  },
+  {
+    "q": "how to flood fill tiles from a position",
+    "a": "func flood_fill(start: Vector2i, old_id: int, new_atlas: Vector2i) -> void:\n    var queue = [start]\n    var visited = {}\n    while queue:\n        var cell = queue.pop_front()\n        if visited.has(cell): continue\n        visited[cell] = true\n        if $TileMapLayer.get_cell_atlas_coords(cell) != Vector2i(old_id, 0): continue\n        $TileMapLayer.set_cell(cell, 0, new_atlas)\n        for dir in [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]:\n            queue.append(cell + dir)"
+  },
+  {
+    "q": "how to change a light2d color and energy from code",
+    "a": "$PointLight2D.color = Color(1.0, 0.5, 0.0)\n$PointLight2D.energy = 2.0"
+  },
+  {
+    "q": "how to flicker a light2d to simulate fire",
+    "a": "func _process(delta):\n    $PointLight2D.energy = randf_range(1.8, 2.2)"
+  },
+  {
+    "q": "how to set a shader parameter on a sprite",
+    "a": "var mat = $Sprite2D.material as ShaderMaterial\nmat.set_shader_parameter(\"outline_color\", Color.RED)"
+  },
+  {
+    "q": "how to create a outline shader effect on a sprite2d",
+    "a": "# In shader:\n# shader_type canvas_item;\n# uniform sampler2D TEXTURE;\n# uniform float outline_width = 1.0;\n# uniform vec4 outline_color = vec4(1,0,0,1);\n# void fragment() {\n#   vec4 col = texture(TEXTURE, UV);\n#   // sample neighbors and draw outline if edge\n# }\n# In GDScript:\n$Sprite2D.material = ShaderMaterial.new()\n$Sprite2D.material.shader = preload(\"res://outline.gdshader\")"
+  },
+  {
+    "q": "how to animate a shader parameter with a tween",
+    "a": "var mat = $Sprite2D.material as ShaderMaterial\nvar tween = create_tween().set_loops()\ntween.tween_method(func(v): mat.set_shader_parameter(\"wave\", v), 0.0, 1.0, 1.0)"
+  },
+  {
+    "q": "how to use a world environment to add bloom",
+    "a": "$WorldEnvironment.environment.glow_enabled = true\n$WorldEnvironment.environment.glow_intensity = 1.5\n$WorldEnvironment.environment.glow_bloom = 0.5"
+  },
+  {
+    "q": "how to change the sky color of a world environment",
+    "a": "var sky = ProceduralSkyMaterial.new()\nsky.sky_top_color = Color(0.1, 0.1, 0.4)\nsky.sky_horizon_color = Color(0.8, 0.4, 0.1)\n$WorldEnvironment.environment.sky.sky_material = sky"
+  },
+  {
+    "q": "how to toggle day night cycle by rotating a directional light",
+    "a": "var time: float = 0.0\nfunc _process(delta):\n    time += delta * day_speed\n    $DirectionalLight3D.rotation_degrees.x = time * 360.0 / DAY_LENGTH - 90.0\n    $DirectionalLight3D.light_color = day_gradient.sample(fmod(time / DAY_LENGTH, 1.0))"
+  },
+  {
+    "q": "how to implement a basic dialogue system with an array",
+    "a": "var lines: Array[String] = [\"Hello!\", \"How are you?\", \"Goodbye!\"]\nvar current_line: int = 0\nfunc advance() -> void:\n    if current_line < lines.size():\n        $Label.text = lines[current_line]\n        current_line += 1\n    else:\n        end_dialogue()"
+  },
+  {
+    "q": "how to implement a typewriter text effect",
+    "a": "func typewrite(text: String) -> void:\n    $Label.text = \"\"\n    for c in text:\n        $Label.text += c\n        await get_tree().create_timer(0.05).timeout"
+  },
+  {
+    "q": "how to speed up typewriter effect when player presses a button",
+    "a": "var typing_speed: float = 0.05\nfunc _input(event):\n    if event.is_action_pressed(\"ui_accept\"):\n        if is_typing:\n            typing_speed = 0.01  # fast-forward\n        else:\n            advance_dialogue()"
+  },
+  {
+    "q": "how to implement branching dialogue choices",
+    "a": "var choices = [{\"text\": \"Yes\", \"next\": 5}, {\"text\": \"No\", \"next\": 10}]\nfunc show_choices() -> void:\n    for i in choices.size():\n        var btn = Button.new()\n        btn.text = choices[i][\"text\"]\n        var next_id = choices[i][\"next\"]\n        btn.pressed.connect(func(): go_to_node(next_id))\n        $ChoiceContainer.add_child(btn)"
+  },
+  {
+    "q": "how to implement a dialogue system using json",
+    "a": "var dialogue: Dictionary = {}\nfunc _ready():\n    var f = FileAccess.open(\"res://dialogue.json\", FileAccess.READ)\n    dialogue = JSON.parse_string(f.get_as_text())\n    f.close()\nfunc show_node(id: String) -> void:\n    var node = dialogue[id]\n    $SpeakerLabel.text = node[\"speaker\"]\n    typewrite(node[\"text\"])"
+  },
+  {
+    "q": "how to trigger a dialogue when the player enters an area",
+    "a": "func _on_body_entered(body):\n    if body.is_in_group(\"player\") and not dialogue_triggered:\n        dialogue_triggered = true\n        DialogueManager.start(dialogue_resource)"
+  },
+  {
+    "q": "how to create a basic quest data resource",
+    "a": "class_name QuestResource\nextends Resource\n@export var quest_id: String\n@export var title: String\n@export var description: String\n@export var objectives: Array[String]\n@export var rewards: Dictionary"
+  },
+  {
+    "q": "how to track quest objective progress",
+    "a": "var active_quests: Dictionary = {}\nfunc update_objective(quest_id: String, objective: String, amount: int = 1) -> void:\n    if quest_id in active_quests:\n        active_quests[quest_id][objective] = active_quests[quest_id].get(objective, 0) + amount\n        check_completion(quest_id)"
+  },
+  {
+    "q": "how to complete a quest and give rewards",
+    "a": "func complete_quest(quest_id: String) -> void:\n    var quest = active_quests[quest_id]\n    player.give_rewards(quest.rewards)\n    active_quests.erase(quest_id)\n    completed_quests.append(quest_id)\n    emit_signal(\"quest_completed\", quest_id)"
+  },
+  {
+    "q": "how to create a simple minimap using a subviewport",
+    "a": "# 1. Add SubViewport as child of Control\n# 2. Inside SubViewport add Camera2D positioned above level\n# 3. Use TextureRect with SubViewport texture\n$MinimapCamera.zoom = Vector2(0.1, 0.1)\nfunc _process(delta):\n    $MinimapCamera.global_position = player.global_position"
+  },
+  {
+    "q": "how to add a player dot to a minimap",
+    "a": "func _process(delta):\n    var map_scale = minimap_size / world_size\n    var dot_pos = player.global_position * map_scale\n    $PlayerDot.position = dot_pos"
+  },
+  {
+    "q": "how to implement a grid-based movement system",
+    "a": "var grid_size: int = 32\nvar grid_pos: Vector2i = Vector2i.ZERO\nfunc move_on_grid(dir: Vector2i) -> void:\n    var target = grid_pos + dir\n    if is_cell_walkable(target):\n        grid_pos = target\n        var tween = create_tween()\n        tween.tween_property(self, \"global_position\",\n            Vector2(target) * grid_size + Vector2(grid_size, grid_size) * 0.5, 0.15)"
+  },
+  {
+    "q": "how to implement a turn-based grid game loop",
+    "a": "enum Turn { PLAYER, ENEMY }\nvar current_turn = Turn.PLAYER\nfunc end_player_turn() -> void:\n    current_turn = Turn.ENEMY\n    for enemy in get_tree().get_nodes_in_group(\"enemies\"):\n        enemy.take_turn()\n    current_turn = Turn.PLAYER"
+  },
+  {
+    "q": "how to use call_deferred to avoid physics conflicts",
+    "a": "call_deferred(\"queue_free\")\ncall_deferred(\"add_child\", new_node)"
+  },
+  {
+    "q": "how to use set_deferred to change physics properties safely",
+    "a": "set_deferred(\"position\", new_position)"
+  },
+  {
+    "q": "how to batch draw with draw calls using multimesh",
+    "a": "var mm = MultiMesh.new()\nmm.transform_format = MultiMesh.TRANSFORM_2D\nmm.instance_count = 1000\nmm.mesh = $MeshInstance2D.mesh\nfor i in 1000:\n    mm.set_instance_transform_2d(i, Transform2D(0, Vector2(i * 10, 0)))"
+  },
+  {
+    "q": "how to profile code performance in godot 4",
+    "a": "var t = Time.get_ticks_usec()\n# code to profile\nvar elapsed = Time.get_ticks_usec() - t\nprint(\"Took: \", elapsed, \"µs\")"
+  },
+  {
+    "q": "how to use a thread to load resources without freezing",
+    "a": "var thread = Thread.new()\nfunc _ready():\n    thread.start(_load_resource)\nfunc _load_resource():\n    var res = ResourceLoader.load(\"res://big_level.tscn\")\n    call_deferred(\"_on_resource_loaded\", res)\nfunc _on_resource_loaded(res): $Node.set_script(res)"
+  },
+  {
+    "q": "how to limit fps to reduce cpu usage",
+    "a": "Engine.max_fps = 60"
+  },
+  {
+    "q": "how to check frames per second at runtime",
+    "a": "var fps = Engine.get_frames_per_second()\n$FPSLabel.text = \"FPS: %d\" % fps"
+  },
+  {
+    "q": "how to disable physics process when off screen",
+    "a": "func _on_visibility_changed():\n    set_physics_process(visible)"
+  },
+  {
+    "q": "how to use lod by swapping meshes at distance",
+    "a": "func _process(delta):\n    var dist = global_position.distance_to(camera.global_position)\n    $HighLOD.visible = dist < 50.0\n    $LowLOD.visible = dist >= 50.0"
+  },
+  {
+    "q": "how to only process nodes close to the player",
+    "a": "func _process(delta):\n    if global_position.distance_squared_to(player.global_position) > activation_range_sq:\n        set_process(false)\n        set_physics_process(false)"
+  },
+  {
+    "q": "how to sync player position over the network",
+    "a": "# In MultiplayerSynchronizer, add 'position' to replication config\n# Or manually:\n@rpc(\"any_peer\", \"unreliable\") func sync_pos(pos: Vector2):\n    global_position = pos\nfunc _physics_process(delta):\n    if is_multiplayer_authority():\n        rpc(\"sync_pos\", global_position)"
+  },
+  {
+    "q": "how to implement client side prediction for movement",
+    "a": "func _physics_process(delta):\n    # Always apply input locally for responsiveness\n    apply_input(delta)\n    move_and_slide()\n    if is_multiplayer_authority():\n        rpc(\"server_reconcile\", global_position, velocity)"
+  },
+  {
+    "q": "how to do a reliable rpc call",
+    "a": "@rpc(\"authority\", \"call_local\", \"reliable\")\nfunc take_damage_rpc(amount: int) -> void:\n    health -= amount"
+  },
+  {
+    "q": "how to spawn a scene for all players",
+    "a": "@rpc(\"authority\", \"call_local\", \"reliable\")\nfunc spawn_projectile(pos: Vector2, dir: Vector2) -> void:\n    var proj = projectile_scene.instantiate()\n    proj.global_position = pos\n    proj.direction = dir\n    add_child(proj)"
+  },
+  {
+    "q": "how to check the ping of a peer",
+    "a": "var ping = multiplayer.get_peer(peer_id).get_average_rtt()"
+  },
+  {
+    "q": "how to load a scene asynchronously",
+    "a": "func _ready():\n    ResourceLoader.load_threaded_request(\"res://level2.tscn\")\nfunc _process(delta):\n    var status = ResourceLoader.load_threaded_get_status(\"res://level2.tscn\")\n    if status == ResourceLoader.THREAD_LOAD_LOADED:\n        var scene = ResourceLoader.load_threaded_get(\"res://level2.tscn\")\n        get_tree().change_scene_to_packed(scene)"
+  },
+  {
+    "q": "how to add a loading screen between scenes",
+    "a": "func change_to(path: String) -> void:\n    get_tree().change_scene_to_file(\"res://ui/loading_screen.tscn\")\n    await get_tree().process_frame\n    ResourceLoader.load_threaded_request(path)\n    while ResourceLoader.load_threaded_get_status(path) != ResourceLoader.THREAD_LOAD_LOADED:\n        await get_tree().process_frame\n    get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(path))"
+  },
+  {
+    "q": "how to get a node from another scene without autoload",
+    "a": "var other = get_node(\"/root/MainScene/OtherNode\")"
+  },
+  {
+    "q": "how to instantiate a scene and add it as a child",
+    "a": "var scene = preload(\"res://enemy.tscn\")\nvar instance = scene.instantiate()\nadd_child(instance)\ninstance.global_position = spawn_point"
+  },
+  {
+    "q": "how to remove all children from a node",
+    "a": "for child in get_children():\n    child.queue_free()"
+  },
+  {
+    "q": "how to draw debug shapes in 2d",
+    "a": "func _draw():\n    draw_circle(Vector2.ZERO, detection_radius, Color(1, 0, 0, 0.3))\n    draw_line(Vector2.ZERO, velocity, Color.GREEN, 2.0)"
+  },
+  {
+    "q": "how to draw a debug line in 3d",
+    "a": "# Use DebugDraw3D plugin or RenderingServer\nfunc draw_debug_line(from: Vector3, to: Vector3) -> void:\n    DebugDraw3D.draw_line(from, to, Color.RED)"
+  },
+  {
+    "q": "how to show a debug overlay with node info",
+    "a": "func _draw():\n    draw_string(ThemeDB.fallback_font,\n        Vector2.ZERO, \"HP: %d State: %s\" % [health, State.keys()[state]],\n        HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color.WHITE)"
+  },
+  {
+    "q": "how to use print_rich for colored terminal output",
+    "a": "print_rich(\"[color=red]ERROR:[/color] Something went wrong\")"
+  },
+  {
+    "q": "how to use push_warning and push_error",
+    "a": "push_warning(\"Value is close to limit: \", value)\npush_error(\"Critical failure in \", name)"
+  },
+  {
+    "q": "how to step through frames manually for debugging",
+    "a": "Engine.time_scale = 0.1  # Slow motion\nEngine.time_scale = 0.0  # Freeze"
+  },
+  {
+    "q": "how to log to a file for debugging",
+    "a": "var log_file = FileAccess.open(\"user://debug.log\", FileAccess.WRITE)\nfunc log(msg: String) -> void:\n    log_file.store_line(\"[%s] %s\" % [Time.get_datetime_string_from_system(), msg])"
+  },
+  {
+    "q": "how to implement the observer pattern with signals",
+    "a": "# Observable:\nclass_name EventBus\nextends Node\nsignal enemy_died(enemy_id: int)\nsignal item_collected(item: ItemResource)\n# Emitter:\nEventBus.enemy_died.emit(id)\n# Listener:\nEventBus.enemy_died.connect(_on_enemy_died)"
+  },
+  {
+    "q": "how to implement the command pattern for undo redo",
+    "a": "class_name MoveCommand\nextends RefCounted\nvar target: Node2D\nvar old_pos: Vector2\nvar new_pos: Vector2\nfunc execute(): target.global_position = new_pos\nfunc undo(): target.global_position = old_pos"
+  },
+  {
+    "q": "how to implement an undo redo stack",
+    "a": "var history: Array = []\nvar redo_stack: Array = []\nfunc execute(cmd) -> void:\n    cmd.execute()\n    history.append(cmd)\n    redo_stack.clear()\nfunc undo() -> void:\n    if history.is_empty(): return\n    var cmd = history.pop_back()\n    cmd.undo()\n    redo_stack.append(cmd)"
+  },
+  {
+    "q": "how to use the singleton pattern in gdscript",
+    "a": "# In autoload script GameManager.gd:\nvar score: int = 0\nfunc add_score(amount: int) -> void:\n    score += amount\n    emit_signal(\"score_changed\", score)\n# Usage from anywhere:\nGameManager.add_score(100)"
+  },
+  {
+    "q": "how to use a state pattern with polymorphism",
+    "a": "class_name BaseState\nextends RefCounted\nfunc enter(agent: Node) -> void: pass\nfunc exit(agent: Node) -> void: pass\nfunc update(agent: Node, delta: float) -> BaseState: return null"
+  },
+  {
+    "q": "how to use composition instead of deep inheritance",
+    "a": "# Instead of Enemy > FlyingEnemy > FlyingShootingEnemy\n# Use components:\nvar movement_component: MovementComponent\nvar combat_component: CombatComponent\nvar flying_component: FlyingComponent\nfunc _physics_process(delta):\n    movement_component.process(self, delta)\n    combat_component.process(self, delta)"
+  },
+  {
+    "q": "how to defer heavy initialization to avoid frame drops",
+    "a": "func _ready():\n    call_deferred(\"_initialize_heavy_systems\")\nfunc _initialize_heavy_systems():\n    build_navigation_graph()\n    spawn_all_enemies()"
+  },
+  {
+    "q": "how to use resource changed signal to react to property edits",
+    "a": "func _ready():\n    my_resource.changed.connect(_on_resource_changed)\nfunc _on_resource_changed() -> void:\n    apply_stats_from_resource()"
+  },
+  {
+    "q": "how to get xr controller button press",
+    "a": "func _on_button_pressed(name: String) -> void:\n    if name == \"trigger_click\":\n        shoot()"
+  },
+  {
+    "q": "how to get the position of an xr hand controller",
+    "a": "var hand_pos = $XRController3D.global_position"
+  },
+  {
+    "q": "how to teleport player in vr",
+    "a": "func teleport_to(target: Vector3) -> void:\n    $XROrigin3D.global_position = target - $XRCamera3D.position"
+  },
+  {
+    "q": "how to make an object grabbable in vr",
+    "a": "func _on_grab(grabber: XRController3D) -> void:\n    reparent(grabber)\n    global_position = grabber.global_position\n    $RigidBody3D.freeze = true"
+  },
+  {
+    "q": "how to use get_tree process_frame signal",
+    "a": "await get_tree().process_frame\n# code runs next frame"
+  },
+  {
+    "q": "how to use get_tree physics_frame signal",
+    "a": "await get_tree().physics_frame\n# code runs after next physics step"
+  },
+  {
+    "q": "how to use multiplayer.peer_connected signal",
+    "a": "multiplayer.peer_connected.connect(func(id): print(\"Peer joined: \", id))"
+  },
+  {
+    "q": "how to change physics tick rate",
+    "a": "Engine.physics_ticks_per_second = 120"
+  },
+  {
+    "q": "how to get delta in a non-physics process",
+    "a": "func _process(delta: float) -> void:\n    # delta is seconds since last frame\n    timer -= delta"
+  },
+  {
+    "q": "how to use input map to check custom action",
+    "a": "if Input.is_action_pressed(\"my_custom_action\"):\n    do_thing()"
+  },
+  {
+    "q": "how to add an input event to a custom action at runtime",
+    "a": "var ev = InputEventKey.new()\nev.keycode = KEY_F\nInputMap.action_add_event(\"interact\", ev)"
+  },
+  {
+    "q": "how to vibrate a controller",
+    "a": "Input.start_joy_vibration(0, 0.5, 0.8, 0.3)"
+  },
+  {
+    "q": "how to detect touch input on mobile",
+    "a": "func _input(event):\n    if event is InputEventScreenTouch and event.pressed:\n        handle_tap(event.position)"
+  },
+  {
+    "q": "how to handle swipe gestures",
+    "a": "var touch_start: Vector2\nfunc _input(event):\n    if event is InputEventScreenTouch:\n        if event.pressed: touch_start = event.position\n        else:\n            var delta = event.position - touch_start\n            if delta.length() > 50:\n                on_swipe(delta.normalized())"
+  },
+  {
+    "q": "how to get the current time in godot 4",
+    "a": "var time = Time.get_unix_time_from_system()\nvar datetime = Time.get_datetime_dict_from_system()"
+  },
+  {
+    "q": "how to format time as mm:ss",
+    "a": "func format_time(seconds: float) -> String:\n    var m = int(seconds) / 60\n    var s = int(seconds) % 60\n    return \"%02d:%02d\" % [m, s]"
+  },
+  {
+    "q": "how to get the os platform name",
+    "a": "var platform = OS.get_name()  # \"Windows\", \"macOS\", \"Linux\", \"Android\", \"iOS\""
+  },
+  {
+    "q": "how to open a url in the browser",
+    "a": "OS.shell_open(\"https://godotengine.org\")"
+  },
+  {
+    "q": "how to change the window title",
+    "a": "DisplayServer.window_set_title(\"My Awesome Game\")"
+  },
+  {
+    "q": "how to toggle fullscreen mode",
+    "a": "if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:\n    DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)\nelse:\n    DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)"
+  },
+  {
+    "q": "how to set a window icon",
+    "a": "var img = Image.load_from_file(\"res://icon.png\")\nDisplayServer.set_icon(img)"
+  },
+  {
+    "q": "how to generate a unique id string",
+    "a": "var uid = str(randi()) + str(Time.get_unix_time_from_system())"
+  },
+  {
+    "q": "how to use resource uid to load a resource",
+    "a": "var res = load(\"uid://abc123def\")"
+  },
+  {
+    "q": "how to list files in a directory",
+    "a": "var dir = DirAccess.open(\"res://levels/\")\nif dir:\n    dir.list_dir_begin()\n    var file = dir.get_next()\n    while file != \"\":\n        if not dir.current_is_dir(): print(file)\n        file = dir.get_next()"
+  },
+  {
+    "q": "how to write lines to a text file",
+    "a": "var file = FileAccess.open(\"user://output.txt\", FileAccess.WRITE)\nfor line in lines:\n    file.store_line(line)\nfile.close()"
+  },
+  {
+    "q": "how to compress data with godot compression",
+    "a": "var original = \"hello world\".to_utf8_buffer()\nvar compressed = original.compress(FileAccess.COMPRESSION_GZIP)"
+  },
+  {
+    "q": "how to decompress godot compressed data",
+    "a": "var decompressed = compressed.decompress(original_size, FileAccess.COMPRESSION_GZIP)\nvar text = decompressed.get_string_from_utf8()"
+  },
+  {
+    "q": "how to use a for loop with an index in gdscript",
+    "a": "for i in range(arr.size()):\n    print(i, arr[i])"
+  },
+  {
+    "q": "how to use enumerate pattern in gdscript",
+    "a": "for i in items.size():\n    print(\"%d: %s\" % [i, items[i]])"
+  },
+  {
+    "q": "how to reverse iterate over an array",
+    "a": "for i in range(arr.size() - 1, -1, -1):\n    print(arr[i])"
+  },
+  {
+    "q": "how to append multiple items to an array at once",
+    "a": "arr.append_array([1, 2, 3, 4])"
+  },
+  {
+    "q": "how to insert an element at a specific array index",
+    "a": "arr.insert(2, \"new_element\")"
+  },
+  {
+    "q": "how to remove an element at a specific array index",
+    "a": "arr.remove_at(2)"
+  },
+  {
+    "q": "how to find the index of an element in an array",
+    "a": "var idx = arr.find(\"target\")"
+  },
+  {
+    "q": "how to count occurrences of a value in an array",
+    "a": "var count = arr.count(\"enemy\")"
+  },
+  {
+    "q": "how to reverse an array in place",
+    "a": "arr.reverse()"
+  },
+  {
+    "q": "how to get a slice of an array",
+    "a": "var sub = arr.slice(1, 4)"
+  },
+  {
+    "q": "how to flatten a nested array",
+    "a": "var flat = nested.reduce(func(a, b): return a + b, [])"
+  },
+  {
+    "q": "how to remove duplicate elements from an array",
+    "a": "var unique = []\nfor item in arr:\n    if not unique.has(item): unique.append(item)"
+  },
+  {
+    "q": "how to use a stack with push and pop",
+    "a": "var stack: Array = []\nstack.push_back(item)  # push\nvar top = stack.pop_back()  # pop"
+  },
+  {
+    "q": "how to use a queue with push and pop front",
+    "a": "var queue: Array = []\nqueue.push_back(item)  # enqueue\nvar front = queue.pop_front()  # dequeue"
+  },
+  {
+    "q": "how to use a set for unique items in gdscript",
+    "a": "var item_set: Dictionary = {}\nitem_set[item] = true  # add\nitem_set.erase(item)  # remove\nif item in item_set: pass  # check"
+  },
+  {
+    "q": "how to create a priority queue using a sorted array",
+    "a": "var pq: Array = []\nfunc pq_push(item, priority: float):\n    pq.append({\"item\": item, \"p\": priority})\n    pq.sort_custom(func(a, b): return a.p < b.p)\nfunc pq_pop():\n    return pq.pop_front()[\"item\"]"
+  },
+  {
+    "q": "how to deep clone an array",
+    "a": "var deep_copy = arr.duplicate(true)"
+  },
+  {
+    "q": "how to check if two arrays are equal",
+    "a": "if arr_a == arr_b:\n    print(\"equal\")"
+  },
+  {
+    "q": "how to concatenate two arrays",
+    "a": "var combined = arr_a + arr_b"
+  },
+  {
+    "q": "how to get the first element of an array safely",
+    "a": "var first = arr.front() if not arr.is_empty() else null"
+  },
+  {
+    "q": "how to get the last element of an array safely",
+    "a": "var last = arr.back() if not arr.is_empty() else null"
+  },
+  {
+    "q": "how to clear all elements from an array",
+    "a": "arr.clear()"
+  },
+  {
+    "q": "how to use a dictionary as a set to track visited nodes",
+    "a": "var visited: Dictionary = {}\nfunc visit(node_id: int):\n    visited[node_id] = true\nfunc is_visited(node_id: int) -> bool:\n    return visited.has(node_id)"
+  },
+  {
+    "q": "how to create a 2d grid array",
+    "a": "var grid: Array = []\nfor y in range(height):\n    var row: Array = []\n    for x in range(width):\n        row.append(0)\n    grid.append(row)"
+  },
+  {
+    "q": "how to access a 2d grid array element",
+    "a": "var cell = grid[y][x]"
+  },
+  {
+    "q": "how to implement a character stats system with base and bonus values",
+    "a": "class_name CharacterStats\nextends Resource\n@export var base_strength: int = 10\nvar strength_bonus: int = 0\nvar strength: int:\n    get: return base_strength + strength_bonus"
+  },
+  {
+    "q": "how to implement level up experience system",
+    "a": "var level: int = 1\nvar experience: int = 0\nfunc xp_to_next_level() -> int:\n    return level * level * 100\nfunc add_experience(amount: int) -> void:\n    experience += amount\n    while experience >= xp_to_next_level():\n        experience -= xp_to_next_level()\n        level_up()"
+  },
+  {
+    "q": "how to implement attribute modifiers with add and multiply",
+    "a": "var base_value: float = 100.0\nvar additive_mods: Array[float] = []\nvar multiplicative_mods: Array[float] = []\nfunc final_value() -> float:\n    var add_sum = additive_mods.reduce(func(a, b): return a + b, 0.0)\n    var mul_product = multiplicative_mods.reduce(func(a, b): return a * b, 1.0)\n    return (base_value + add_sum) * mul_product"
+  },
+  {
+    "q": "how to spawn enemies in a wave system",
+    "a": "var current_wave: int = 0\nvar enemies_in_wave: int = 0\nvar enemies_remaining: int = 0\nfunc start_wave() -> void:\n    current_wave += 1\n    enemies_in_wave = current_wave * 5\n    enemies_remaining = enemies_in_wave\n    for i in enemies_in_wave:\n        await get_tree().create_timer(0.5).timeout\n        spawn_enemy()"
+  },
+  {
+    "q": "how to spawn enemies at random spawn points",
+    "a": "var spawn_points: Array[Node2D] = []\nfunc spawn_enemy() -> void:\n    var sp = spawn_points[randi() % spawn_points.size()]\n    var enemy = enemy_scene.instantiate()\n    enemy.global_position = sp.global_position\n    add_child(enemy)"
+  },
+  {
+    "q": "how to prevent enemy spawning near the player",
+    "a": "func get_valid_spawn() -> Vector2:\n    var pos: Vector2\n    var tries = 0\n    while tries < 20:\n        pos = Vector2(randf_range(0, map_w), randf_range(0, map_h))\n        if pos.distance_to(player.global_position) > min_spawn_dist:\n            return pos\n        tries += 1\n    return pos"
+  },
+  {
+    "q": "how to increase spawn rate over time",
+    "a": "var spawn_interval: float = 3.0\nfunc _ready():\n    $SpawnTimer.timeout.connect(spawn_enemy)\n    $SpawnTimer.start(spawn_interval)\nfunc _on_wave_complete():\n    spawn_interval = max(0.5, spawn_interval * 0.85)\n    $SpawnTimer.wait_time = spawn_interval"
+  },
+  {
+    "q": "how to add screenshake using camera offset",
+    "a": "func shake(magnitude: float, duration: float) -> void:\n    var elapsed = 0.0\n    while elapsed < duration:\n        var amount = magnitude * (1.0 - elapsed / duration)\n        $Camera2D.offset = Vector2(randf_range(-amount, amount), randf_range(-amount, amount))\n        elapsed += get_process_delta_time()\n        await get_tree().process_frame\n    $Camera2D.offset = Vector2.ZERO"
+  },
+  {
+    "q": "how to freeze frame for hit impact feedback",
+    "a": "func freeze_frame(duration: float) -> void:\n    Engine.time_scale = 0.05\n    await get_tree().create_timer(duration * 0.05).timeout\n    Engine.time_scale = 1.0"
+  },
+  {
+    "q": "how to flash a sprite white when hit",
+    "a": "func flash_white() -> void:\n    $Sprite2D.material = white_material\n    await get_tree().create_timer(0.1).timeout\n    $Sprite2D.material = normal_material"
+  },
+  {
+    "q": "how to add squash and stretch to a jump",
+    "a": "func _physics_process(delta):\n    if velocity.y < 0:  # rising\n        scale = Vector2(0.8, 1.2)\n    elif velocity.y > 0:  # falling\n        scale = Vector2(1.2, 0.8)\n    else:\n        scale = scale.lerp(Vector2.ONE, 10 * delta)"
+  },
+  {
+    "q": "how to implement screen flash on damage",
+    "a": "func screen_flash(color: Color, duration: float) -> void:\n    $FlashRect.color = color\n    $FlashRect.modulate.a = 1.0\n    var tween = create_tween()\n    tween.tween_property($FlashRect, \"modulate:a\", 0.0, duration)"
+  },
+  {
+    "q": "how to add controller rumble on impact",
+    "a": "func on_hit() -> void:\n    Input.start_joy_vibration(0, 0.0, 1.0, 0.2)"
+  },
+  {
+    "q": "how to make coins bounce when collected",
+    "a": "func _ready():\n    var tween = create_tween()\n    tween.tween_property(self, \"position:y\", position.y - 20, 0.3).set_trans(Tween.TRANS_SINE)\n    tween.tween_property(self, \"position:y\", position.y, 0.2).set_trans(Tween.TRANS_BOUNCE)\n    tween.tween_callback(queue_free)"
+  },
+  {
+    "q": "how to make a character leave footprint decals",
+    "a": "func _on_step() -> void:\n    var decal = footprint_scene.instantiate()\n    decal.global_position = global_position\n    decal.rotation = rotation\n    get_tree().root.add_child(decal)"
+  },
+  {
+    "q": "how to apply force to a rigidbody3d at a specific point",
+    "a": "$RigidBody3D.apply_force(force_vector, position - $RigidBody3D.global_position)"
+  },
+  {
+    "q": "how to make rigidbodies explode outward from a point",
+    "a": "func explode(center: Vector3, radius: float, force: float) -> void:\n    for body in bodies_in_radius:\n        var dir = (body.global_position - center).normalized()\n        var dist = body.global_position.distance_to(center)\n        var strength = force * (1.0 - dist / radius)\n        body.apply_central_impulse(dir * strength)"
+  },
+  {
+    "q": "how to create a hinge joint3d in code",
+    "a": "var joint = HingeJoint3D.new()\njoint.node_a = $BodyA.get_path()\njoint.node_b = $BodyB.get_path()\nadd_child(joint)"
+  },
+  {
+    "q": "how to get the velocity of a rigidbody3d",
+    "a": "var vel = $RigidBody3D.linear_velocity"
+  },
+  {
+    "q": "how to freeze a rigidbody3d in place",
+    "a": "$RigidBody3D.freeze = true\n$RigidBody3D.freeze_mode = RigidBody3D.FREEZE_MODE_STATIC"
+  },
+  {
+    "q": "how to detect a 3d collision with a specific body",
+    "a": "func _on_body_entered(body: Node3D) -> void:\n    if body.is_in_group(\"projectile\"):\n        take_damage(body.damage)\n        body.queue_free()"
+  },
+  {
+    "q": "how to make a 3d character move on a slope correctly",
+    "a": "up_direction = Vector3.UP\nfloor_max_angle = deg_to_rad(45.0)\nvelocity.y -= gravity * delta\nmove_and_slide()"
+  },
+  {
+    "q": "how to instantiate a mesh and set its material in 3d",
+    "a": "var mi = MeshInstance3D.new()\nmi.mesh = BoxMesh.new()\nmi.material_override = StandardMaterial3D.new()\nmi.material_override.albedo_color = Color.RED\nadd_child(mi)"
+  },
+  {
+    "q": "how to create a procedural mesh with surfacetool in 3d",
+    "a": "var st = SurfaceTool.new()\nst.begin(Mesh.PRIMITIVE_TRIANGLES)\nst.add_vertex(Vector3(0, 0, 0))\nst.add_vertex(Vector3(1, 0, 0))\nst.add_vertex(Vector3(0, 1, 0))\nvar mesh = st.commit()\n$MeshInstance3D.mesh = mesh"
+  },
+  {
+    "q": "how to set a navigation mesh filter for specific areas",
+    "a": "$NavigationRegion3D.navigation_layers = 1  # layer bitmask"
+  },
+  {
+    "q": "how to check if a 3d position is inside a collision shape",
+    "a": "var shape_rid = $CollisionShape3D.shape.get_rid()\nvar query = PhysicsShapeQueryParameters3D.new()\nquery.shape_rid = shape_rid\nquery.transform = $CollisionShape3D.global_transform\nvar hits = get_world_3d().direct_space_state.intersect_shape(query)"
+  },
+  {
+    "q": "how to create a fog area in godot 4 3d",
+    "a": "var fog = FogVolume.new()\nfog.size = Vector3(20, 5, 20)\nvar fog_mat = FogMaterial.new()\nfog_mat.density = 0.5\nfog_mat.albedo = Color(0.8, 0.8, 1.0)\nfog.material = fog_mat\nadd_child(fog)"
+  },
+  {
+    "q": "how to make a sprite2d animation without animationplayer",
+    "a": "var frames: Array[Texture2D] = []\nvar current_frame: int = 0\nvar frame_time: float = 0.1\nvar elapsed: float = 0.0\nfunc _process(delta):\n    elapsed += delta\n    if elapsed >= frame_time:\n        elapsed = 0.0\n        current_frame = (current_frame + 1) % frames.size()\n        $Sprite2D.texture = frames[current_frame]"
+  },
+  {
+    "q": "how to animate a ui element entering the screen",
+    "a": "func _ready():\n    position.x = -200  # off-screen\n    var tween = create_tween()\n    tween.tween_property(self, \"position:x\", 0.0, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)"
+  },
+  {
+    "q": "how to animate 3d character blend between walk and run",
+    "a": "$AnimationTree.set(\"parameters/BlendSpace1D/blend_position\", speed / max_speed)"
+  },
+  {
+    "q": "how to get the current animationtree state machine state",
+    "a": "var playback = $AnimationTree.get(\"parameters/StateMachine/playback\") as AnimationNodeStateMachinePlayback\nvar current = playback.get_current_node()"
+  },
+  {
+    "q": "how to travel to a state in animationtree state machine",
+    "a": "var playback = $AnimationTree.get(\"parameters/StateMachine/playback\") as AnimationNodeStateMachinePlayback\nplayback.travel(\"run\")"
+  },
+  {
+    "q": "how to use animation events to trigger sounds",
+    "a": "# In AnimationPlayer, add Method Track:\n# Track path: AudioStreamPlayer\n# Key: play()\n# Do it via code:\nvar anim = $AnimationPlayer.get_animation(\"attack\")\nvar track = anim.add_track(Animation.TYPE_METHOD)\nanim.track_set_path(track, \"AudioStreamPlayer\")\nanim.track_insert_key(track, 0.3, {\"method\": \"play\", \"args\": []})"
+  },
+  {
+    "q": "how to reset an animation to the beginning",
+    "a": "$AnimationPlayer.stop()\n$AnimationPlayer.play(\"my_anim\")\n$AnimationPlayer.seek(0.0)"
+  },
+  {
+    "q": "how to create a 2d animation using animated sprite2d",
+    "a": "# Add AnimatedSprite2D, create SpriteFrames resource\n# Then in code:\n$AnimatedSprite2D.play(\"run\")\n$AnimatedSprite2D.animation_finished.connect(func(): $AnimatedSprite2D.play(\"idle\"))"
+  },
+  {
+    "q": "how to get the total length of an animation",
+    "a": "var length = $AnimationPlayer.get_animation(\"walk\").length"
+  },
+  {
+    "q": "how to pause and resume an animation player",
+    "a": "$AnimationPlayer.pause()  # pause\n$AnimationPlayer.play()   # resume"
+  },
+  {
+    "q": "how to run code only every n physics frames",
+    "a": "var frame_counter: int = 0\nfunc _physics_process(delta):\n    frame_counter += 1\n    if frame_counter % 5 == 0:  # every 5 frames\n        expensive_check()"
+  },
+  {
+    "q": "how to implement a game clock that counts up",
+    "a": "var game_time: float = 0.0\nvar running: bool = true\nfunc _process(delta):\n    if running:\n        game_time += delta"
+  },
+  {
+    "q": "how to implement a countdown timer",
+    "a": "var time_left: float = 60.0\nfunc _process(delta):\n    if time_left > 0:\n        time_left -= delta\n        $TimerLabel.text = \"%d\" % ceil(time_left)\n    else:\n        game_over()"
+  },
+  {
+    "q": "how to schedule a repeated event every n seconds",
+    "a": "var interval_timer: float = 0.0\nvar interval: float = 5.0\nfunc _process(delta):\n    interval_timer += delta\n    if interval_timer >= interval:\n        interval_timer -= interval\n        on_interval()"
+  },
+  {
+    "q": "how to implement slowmotion with engine time scale",
+    "a": "func enter_slow_motion() -> void:\n    Engine.time_scale = 0.3\n    await get_tree().create_timer(2.0 * 0.3).timeout\n    Engine.time_scale = 1.0"
+  },
+  {
+    "q": "how to create a checkpoint system",
+    "a": "var last_checkpoint: Vector2\nfunc activate_checkpoint(pos: Vector2) -> void:\n    last_checkpoint = pos\n    checkpoint_activated.emit(pos)\nfunc respawn() -> void:\n    global_position = last_checkpoint\n    health = max_health"
+  },
+  {
+    "q": "how to implement a door that opens with a key",
+    "a": "func interact(player: Node) -> void:\n    if player.inventory.has_item(\"key\"):\n        player.inventory.remove_item(\"key\")\n        open_door()\n    else:\n        $Label.text = \"Locked!\""
+  },
+  {
+    "q": "how to implement a pressure plate that opens a door",
+    "a": "func _on_body_entered(body: Node2D) -> void:\n    active_bodies += 1\n    if active_bodies >= required_bodies:\n        $Door.open()\nfunc _on_body_exited(body: Node2D) -> void:\n    active_bodies -= 1\n    if active_bodies < required_bodies:\n        $Door.close()"
+  },
+  {
+    "q": "how to create a one way platform in godot 4",
+    "a": "# On the CharacterBody2D:\nset_collision_mask_value(2, Input.is_action_pressed(\"move_down\"))\n# Platform collision layer 2 will only collide when not pressing down"
+  },
+  {
+    "q": "how to implement a moving platform in godot 4",
+    "a": "@export var point_a: Vector2\n@export var point_b: Vector2\n@export var speed: float = 2.0\nvar t: float = 0.0\nvar direction: float = 1.0\nfunc _physics_process(delta):\n    t += delta * speed * direction\n    if t >= 1.0 or t <= 0.0: direction *= -1\n    global_position = point_a.lerp(point_b, t)"
+  },
+  {
+    "q": "how to implement a ladder system",
+    "a": "var on_ladder: bool = false\nfunc _on_ladder_entered(body):\n    if body == self: on_ladder = true\nfunc _on_ladder_exited(body):\n    if body == self: on_ladder = false\nfunc _physics_process(delta):\n    if on_ladder:\n        velocity.y = Input.get_axis(\"move_up\", \"move_down\") * climb_speed\n        velocity.x = 0"
+  },
+  {
+    "q": "how to implement a rope swing mechanic",
+    "a": "var attached: bool = false\nvar rope_anchor: Vector2\nvar rope_length: float\nfunc _physics_process(delta):\n    if attached:\n        var to_anchor = rope_anchor - global_position\n        if to_anchor.length() >= rope_length:\n            velocity = velocity.slide(to_anchor.normalized())\n        velocity.y += gravity * delta\n    move_and_slide()"
+  },
+  {
+    "q": "how to store and retrieve high scores",
+    "a": "var high_scores: Array = []\nfunc add_score(name: String, score: int) -> void:\n    high_scores.append({\"name\": name, \"score\": score})\n    high_scores.sort_custom(func(a, b): return a.score > b.score)\n    if high_scores.size() > 10: high_scores.resize(10)\n    save_scores()"
+  },
+  {
+    "q": "how to implement pagination for a list of items",
+    "a": "var page: int = 0\nvar page_size: int = 10\nfunc get_page_items() -> Array:\n    var start = page * page_size\n    return items.slice(start, start + page_size)\nfunc next_page(): page = min(page + 1, (items.size() - 1) / page_size)\nfunc prev_page(): page = max(page - 1, 0)"
+  },
+  {
+    "q": "how to implement a tag system for game objects",
+    "a": "var tags: Array[String] = []\nfunc add_tag(tag: String): if not tags.has(tag): tags.append(tag)\nfunc has_tag(tag: String) -> bool: return tags.has(tag)\nfunc remove_tag(tag: String): tags.erase(tag)"
+  },
+  {
+    "q": "how to implement a game event system without autoload",
+    "a": "class_name EventBus\nextends Node\nstatic var instance: EventBus\nsignal on_player_died\nsignal on_score_changed(new_score: int)\nfunc _ready():\n    instance = self"
+  },
+  {
+    "q": "how to implement a simple decision tree for enemy ai",
+    "a": "func make_decision() -> String:\n    if health < 20:\n        return \"flee\"\n    elif player_distance < attack_range:\n        return \"attack\"\n    elif player_distance < detection_range:\n        return \"chase\"\n    else:\n        return \"patrol\""
+  },
+  {
+    "q": "how to implement a rule based ai with priority list",
+    "a": "func get_action() -> Callable:\n    if health < flee_threshold: return flee\n    if can_attack(): return attack\n    if player_visible(): return chase\n    if at_patrol_point(): return wait_at_point\n    return move_to_patrol_point"
+  },
+  {
+    "q": "how to implement squad leader ai that coordinates followers",
+    "a": "class_name SquadLeader\nextends Node2D\nvar squad_members: Array = []\nfunc issue_order(order: String, target: Vector2) -> void:\n    for member in squad_members:\n        member.receive_order(order, target)"
+  },
+  {
+    "q": "how to make enemies call for backup when they see the player",
+    "a": "func alert_nearby_enemies() -> void:\n    for enemy in get_tree().get_nodes_in_group(\"enemies\"):\n        if global_position.distance_to(enemy.global_position) < alert_radius:\n            enemy.on_alert(player.global_position)"
+  },
+  {
+    "q": "how to implement cover seeking ai",
+    "a": "func find_cover() -> Vector2:\n    var best_cover = Vector2.ZERO\n    var best_score = -INF\n    for cover_point in cover_points:\n        var is_hidden = not has_line_of_sight_from(cover_point.position, player.global_position)\n        var distance_score = -cover_point.position.distance_to(global_position)\n        var score = (10.0 if is_hidden else 0.0) + distance_score\n        if score > best_score:\n            best_score = score\n            best_cover = cover_point.position\n    return best_cover"
+  },
+  {
+    "q": "how to implement a patrol route that multiple enemies share",
+    "a": "class_name SharedPatrolRoute\nextends Resource\n@export var waypoints: Array[Vector2] = []\nvar current_index: int = 0\nfunc claim_next_point() -> Vector2:\n    var point = waypoints[current_index]\n    current_index = (current_index + 1) % waypoints.size()\n    return point"
+  },
+  {
+    "q": "how to create a lobby system for multiplayer",
+    "a": "var players: Dictionary = {}\nfunc _on_peer_connected(id: int) -> void:\n    players[id] = {\"name\": \"Player\", \"ready\": false}\n    rpc(\"sync_player_list\", players)\n@rpc(\"authority\", \"call_local\", \"reliable\")\nfunc sync_player_list(data: Dictionary) -> void:\n    players = data\n    update_lobby_ui()"
+  },
+  {
+    "q": "how to implement a ready check before starting multiplayer game",
+    "a": "var ready_players: Array[int] = []\n@rpc(\"any_peer\", \"call_local\", \"reliable\")\nfunc set_ready(player_id: int) -> void:\n    if not player_id in ready_players:\n        ready_players.append(player_id)\n    if ready_players.size() == multiplayer.get_peers().size() + 1:\n        start_game()"
+  },
+  {
+    "q": "how to create a custom resource for enemy data",
+    "a": "class_name EnemyData\nextends Resource\n@export var enemy_name: String\n@export var max_health: int = 100\n@export var speed: float = 120.0\n@export var damage: int = 10\n@export var sprite: Texture2D\n@export var scene: PackedScene"
+  },
+  {
+    "q": "how to create a resource for level configuration",
+    "a": "class_name LevelConfig\nextends Resource\n@export var level_name: String\n@export var background: Texture2D\n@export var enemy_spawns: Array[EnemyData] = []\n@export var time_limit: float = 120.0\n@export var next_level: String"
+  },
+  {
+    "q": "how to use export to make a resource editable in the inspector",
+    "a": "class_name WeaponStats\nextends Resource\n@export_range(1, 100) var damage: int = 25\n@export_range(0.1, 5.0) var fire_rate: float = 0.5\n@export var projectile: PackedScene"
+  },
+  {
+    "q": "how to listen for property changes on a resource",
+    "a": "func _ready():\n    weapon_data.changed.connect(on_stats_changed)\nfunc on_stats_changed():\n    update_weapon(weapon_data)"
+  },
+  {
+    "q": "how to translate text with tr function",
+    "a": "$Label.text = tr(\"MAIN_MENU_PLAY\")"
+  },
+  {
+    "q": "how to change game language at runtime",
+    "a": "TranslationServer.set_locale(\"ja\")\nget_tree().reload_current_scene()"
+  },
+  {
+    "q": "how to pluralize translated text",
+    "a": "$Label.text = tr_n(\"ONE_ENEMY\", \"MANY_ENEMIES\", enemy_count) % enemy_count"
+  },
+  {
+    "q": "how to find a node by name in the whole tree",
+    "a": "var node = find_child(\"PlayerHealth\", true, false)"
+  },
+  {
+    "q": "how to get all nodes of a specific class",
+    "a": "var all_enemies = get_tree().get_nodes_in_group(\"enemies\")"
+  },
+  {
+    "q": "how to check if a node is valid and not freed",
+    "a": "if is_instance_valid(enemy_ref):\n    enemy_ref.take_damage(10)"
+  },
+  {
+    "q": "how to run a function on all children of a type",
+    "a": "for child in get_children():\n    if child is Enemy:\n        child.alert()"
+  },
+  {
+    "q": "how to count all nodes of a type in the tree",
+    "a": "var count = get_tree().get_nodes_in_group(\"coins\").size()"
+  },
+  {
+    "q": "how to change the parent of a node while keeping world position",
+    "a": "var world_pos = node.global_position\nnew_parent.add_child(node)\nnode.global_position = world_pos"
+  },
+  {
+    "q": "how to move a node to the front of the draw order",
+    "a": "move_child(node, get_child_count() - 1)"
+  },
+  {
+    "q": "how to move a node to the back of the draw order",
+    "a": "move_child(node, 0)"
+  },
+  {
+    "q": "how to map a value from one range to another",
+    "a": "func map_range(value, in_min, in_max, out_min, out_max):\n    return out_min + (value - in_min) * (out_max - out_min) / (in_max - in_min)"
+  },
+  {
+    "q": "how to remap a value using godots built in remap",
+    "a": "var result = remap(value, 0.0, 100.0, 0.0, 1.0)"
+  },
+  {
+    "q": "how to calculate a point on a bezier curve",
+    "a": "func bezier(p0, p1, p2, p3, t):\n    var u = 1 - t\n    return u*u*u*p0 + 3*u*u*t*p1 + 3*u*t*t*p2 + t*t*t*p3"
+  },
+  {
+    "q": "how to check if two circles overlap",
+    "a": "func circles_overlap(pos_a, r_a, pos_b, r_b) -> bool:\n    return pos_a.distance_squared_to(pos_b) < (r_a + r_b) * (r_a + r_b)"
+  },
+  {
+    "q": "how to check if a point is inside a rectangle",
+    "a": "var rect = Rect2(Vector2(0,0), Vector2(100,100))\nif rect.has_point(point): print(\"inside\")"
+  },
+  {
+    "q": "how to find the closest point on a line segment to a point",
+    "a": "func closest_point_on_segment(a: Vector2, b: Vector2, p: Vector2) -> Vector2:\n    var ab = b - a\n    var t = clamp((p - a).dot(ab) / ab.dot(ab), 0.0, 1.0)\n    return a + ab * t"
+  },
+  {
+    "q": "how to rotate a point around another point",
+    "a": "func rotate_around(point: Vector2, pivot: Vector2, angle: float) -> Vector2:\n    var offset = point - pivot\n    return pivot + offset.rotated(angle)"
+  },
+  {
+    "q": "how to compute the midpoint between two positions",
+    "a": "var midpoint = (pos_a + pos_b) * 0.5"
+  },
+  {
+    "q": "how to generate a random point inside a circle",
+    "a": "func random_in_circle(radius: float) -> Vector2:\n    var angle = randf() * TAU\n    var r = sqrt(randf()) * radius\n    return Vector2(cos(angle) * r, sin(angle) * r)"
+  },
+  {
+    "q": "how to generate a random point on a circle edge",
+    "a": "func random_on_circle(radius: float) -> Vector2:\n    return Vector2.from_angle(randf() * TAU) * radius"
+  },
+  {
+    "q": "how to calculate angular velocity from rotation difference",
+    "a": "var angular_vel = (current_rotation - previous_rotation) / delta\nprevious_rotation = current_rotation"
+  },
+  {
+    "q": "how to implement a simple spring physics formula",
+    "a": "func spring_force(pos, target, velocity, stiffness, damping) -> float:\n    return -stiffness * (pos - target) - damping * velocity"
+  },
+  {
+    "q": "how to use area2d to detect overlaps with specific layers",
+    "a": "$Area2D.collision_layer = 0\n$Area2D.collision_mask = 0b00000010  # detect layer 2 only"
+  },
+  {
+    "q": "how to make a laser beam with a raycast2d",
+    "a": "$RayCast2D.force_raycast_update()\nif $RayCast2D.is_colliding():\n    var hit = $RayCast2D.get_collision_point()\n    $Line2D.set_point_position(1, to_local(hit))\nelse:\n    $Line2D.set_point_position(1, Vector2(0, -laser_length))"
+  },
+  {
+    "q": "how to implement a ricochet bullet",
+    "a": "func _on_body_hit(body, normal: Vector2) -> void:\n    bounces_left -= 1\n    if bounces_left > 0:\n        direction = direction.bounce(normal)\n    else:\n        queue_free()"
+  },
+  {
+    "q": "how to implement homing missile behavior",
+    "a": "func _physics_process(delta):\n    if target and is_instance_valid(target):\n        var desired = (target.global_position - global_position).normalized()\n        direction = direction.slerp(desired, turn_speed * delta)\n    velocity = direction * speed\n    move_and_slide()"
+  },
+  {
+    "q": "how to raycast from mouse position in 2d",
+    "a": "var mouse = get_global_mouse_position()\nvar query = PhysicsRayQueryParameters2D.create(mouse, mouse + Vector2(0, 1000))\nvar result = get_world_2d().direct_space_state.intersect_ray(query)"
+  },
+  {
+    "q": "how to get the normal at a collision point in 2d",
+    "a": "var result = get_world_2d().direct_space_state.intersect_ray(query)\nif result:\n    var normal = result.normal"
+  },
+  {
+    "q": "how to make a player climb walls like a gecko",
+    "a": "func _physics_process(delta):\n    if is_on_wall():\n        var wall_normal = get_wall_normal()\n        up_direction = -wall_normal\n        velocity -= wall_normal * gravity * delta\n    else:\n        up_direction = Vector3.UP"
   }
 ]
