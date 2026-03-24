@@ -1,0 +1,48 @@
+name: Claude with Custom App
+on:
+  issue_comment:
+    types: [created]
+  # ... other triggers
+
+jobs:
+  claude-response:
+    runs-on: ubuntu-latest
+    steps:
+      # Generate a token from your custom app
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ 3173727 }}
+          private-key: ${{ 
+m+c/aZEn8QBn4nWQug+rklF3JJtxgTYTKhuYbPWtJ71ZHXMIIEowIBAAKCAQEAsi0Mt2pewM6sycGQy8DqYwdEFxnQELRXHWVaBNHClCKuFHI4EXOYSGJd6Wa9Dk8jIy
+UwawsCJ1mQ688MfkrSz7Il5CzagA3wyUCwoTjxKA4TJcSaG+CU4MyxvDq7RiYLxZ
+lbJAASa7hbqD8X8ENmm3mcwXL3OSSRyEMo4EOgxjE8I7uDMDwzsvHOdUX1lbg+4d
+kKbJtGbC41KnbZIPiqqkeNcAqAkOvvpc1Kl6sZkfipSTi6naumA4wEbA7HB96ZKG
+aYttkZaZov8sEPslr7xonDf7y1BP/MVRYd7IdQIDAQABAoIBAHBvVTL5AMoSoZ6/
+cyvglQfgsesR8uZXpxF5v5CC/ZKVP9zPJ0Hab32ih93hL60MG0QOV2qB1flXzgyH
+nxhXSZyYe6g0KGQX1VwKcMy85Zcrvw3G91LFSgIb/LGVR016FqfhVqidavJ0LfiS
+62j79tO2DXYOXYZpdo5QnmodHyDeKeY4Q805t3IlR63og6kbUBwVk5qDBJFNYvGT
+rsrD2H6tT8gZ5ViDXbmDQGNeU4tMzTI9mTJjHl7L8ToEKZiFmscc755uEEv9FQSH
+SpGpi7O/lLS8Ku6Wn0wgSR3CKGzflwMS85tIcgMHmRr/V+JAFsq+4/YLCP2fYJrL
+Hy6RZAECgYEA3g/r1EoldefAEiosOWn1QL3GoBYx0f/84VtW4GDbhDaB4yl3Qm5t
+LGJF4s6auqAyFe9gnNj36o86qcxqfZtyBA10qHZNoB61l4UmiJwUh8wAp7Yxky6P
+D0QtE7dceONLYcAMHxNtcHgX9JLepuhMMR+GXPn6hH8o/EzHUXiq5bUCgYEAzWgZ
+0wjC3MtZ36/9Asm0cX4ZRrUO36o29K4lUAnv4t4K0Zd7pOnx4Gkyi0fYO39q3X4a
+MjOh/c/O38gCzuVFI/9nahl6s7HTbB+HnxQu2jPX85TLylf+jlXjx3oAWrYSsFaH
+FJKVDfCnjGj9d07Qn5E9mv3vU9YRZmSfYIqKD8ECgYA22b/qxBXUtdXfpsMdu2p0
+/2tch57uvEh+cc1XxxTx53TV45wtsJEO8YdJqrbVelRkzqgSlhVGvvJClteHByp2
+jcxPAEnUT0GTl7QY8lSv5lgTFRHRxSJZJwHraNNSmPI5xvI3itjxeviP1OdiWubX
+C25o8OZMbAx3pY9mNGQiMQKBgQCX5w6CBI6m3jOeuvVvJF+vNsPWiHtxaN2vYUHy
+yQaAThjOGyqzMNdRUDqyyfTdO0N6fZE94vU/UHj7AV0iSGczUePWkPUvAqkJ4t9X
+A4QKliBz4Gw9PYnhFR+YG187tj5n7fWDf0t/vaMKsXIQ01ZxSuW2Q2jEJSFFCdDb
+gljLgQKBgAyv9VPfLwoVnuiSqNbWJ5KhuKi8pzgl3bSwWKh/mtFyKdj00IT6GRkb
+zeXSgd4W6kVb/zlhOBj8dnJ9qD5Zi2LgQNDelH+6qxPJORzA2bUQvESquTY5Jh6t
+402vYtmqLz/u0p2qmL/uokH2solbGLOIEdUuMufji7Zi4EPkaDdS }}
+
+      # Use Claude with your custom app's token
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ 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 }}
+          github_token: ${{ steps.app-token.outputs.token }}
+          # ... other configuration
